@@ -88,20 +88,28 @@ class _SettingItem<T extends Enum> extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Wrap(
-          // alignment: WrapAlignment.center,
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
               margin: const EdgeInsets.only(right: 5),
               child: Text('$T'),
             ),
-            ...values.map((value) {
-              return ElevatedButton(
-                onPressed: onChanged != null ? () => onChanged?.call(value) : null,
-                statesController: value == selected ? MaterialStatesController({MaterialState.selected}) : null,
-                child: Text(value.name),
-              );
-            }),
+            Flexible(
+              child: Wrap(
+                // alignment: WrapAlignment.center,
+                children: [
+
+                  ...values.map((value) {
+                    return ElevatedButton(
+                      onPressed: onChanged != null ? () => onChanged?.call(value) : null,
+                      statesController: value == selected ? MaterialStatesController({MaterialState.selected}) : null,
+                      child: Text(value.name),
+                    );
+                  }),
+                ],
+              ),
+            ),
           ],
         ),
       ],
