@@ -46,12 +46,12 @@ class _SettingsState extends State<Settings> {
   Widget build(BuildContext context) {
     return InheritedSettings(
       state: state,
-      setMainAxisAlignment: setMainAxisAlignment,
+      setMainAxisAlignment: _setMainAxisAlignment,
       child: widget.child,
     );
   }
 
-  void setMainAxisAlignment(MainAxisAlignment val) {
+  void _setMainAxisAlignment(MainAxisAlignment val) {
     setState(() => state = state.copyWith(mainAxisAlignment: val));
   }
 }
