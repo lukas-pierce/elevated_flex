@@ -10,4 +10,8 @@ abstract class _ElevatedFlexDelegate extends BoxyDelegate {
     return children.fold(0.0, (sum, child) => sum + child.size.width);
   }
 
+  double get maxChildrenWidth {
+    return children.map((child) => child.size.width).max;
+  }
+
 }
