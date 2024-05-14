@@ -31,6 +31,7 @@ class ElevatedFlexExample extends StatelessWidget {
                 ButtonSegment(value: 6, label: Text('spaceEvenly')),
               ],
             ),
+            SizedBox(height: 20),
             Divider(height: 0),
             Expanded(child: _ColumnsExample()),
             Divider(height: 0),
