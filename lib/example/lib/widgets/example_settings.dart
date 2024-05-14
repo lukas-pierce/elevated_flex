@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:gap/gap.dart';
 
 import '../bloc/flex_settings_cubit.dart';
 
@@ -46,7 +47,7 @@ class ExampleSettings extends StatelessWidget {
                         context.read<FlexSettingsCubit>().mainAxisAlignment = val;
                       },
                     ),
-                    const SizedBox(height: 20),
+                    const Gap(20),
                     _SettingItem<MainAxisSize>(
                       values: MainAxisSize.values,
                       selected: state.mainAxisSize,
@@ -54,7 +55,7 @@ class ExampleSettings extends StatelessWidget {
                         context.read<FlexSettingsCubit>().mainAxisSize = val;
                       },
                     ),
-                    const SizedBox(height: 20),
+                    const Gap(20),
                     _SettingItem<CrossAxisAlignment>(
                       values: CrossAxisAlignment.values,
                       selected: state.crossAxisAlignment,
@@ -95,11 +96,11 @@ class _SettingItem<T extends Enum> extends StatelessWidget {
               margin: const EdgeInsets.only(right: 5),
               child: Text('$T'),
             ),
+            const Gap(5),
             Flexible(
               child: Wrap(
                 // alignment: WrapAlignment.center,
                 children: [
-
                   ...values.map((value) {
                     return ElevatedButton(
                       onPressed: onChanged != null ? () => onChanged?.call(value) : null,
