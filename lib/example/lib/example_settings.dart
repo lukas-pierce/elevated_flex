@@ -25,53 +25,69 @@ class ExampleSettings extends StatelessWidget {
           ),
         ),
       ),
-      child: Column(
+      child: const Column(
         children: [
-          const Text('mainAxisAlignment'),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ElevatedButton(
-                onPressed: () {
-                  //
-                },
-                statesController: MaterialStatesController()..value = {MaterialState.selected},
-                child: const Text('start'),
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  //
-                },
-                child: const Text('end'),
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  //
-                },
-                child: const Text('center'),
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  //
-                },
-                child: const Text('spaceBetween'),
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  //
-                },
-                child: const Text('spaceAround'),
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  //
-                },
-                child: const Text('spaceEvenly'),
-              ),
-            ],
-          ),
+          _SettingItem(),
+          SizedBox(height: 20),
+          _SettingItem(),
         ],
       ),
+    );
+  }
+}
+
+class _SettingItem extends StatelessWidget {
+  const _SettingItem();
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        const Text('mainAxisAlignment'),
+        SizedBox(height: 5),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                //
+              },
+              statesController: MaterialStatesController()..value = {MaterialState.selected},
+              child: const Text('start'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                //
+              },
+              child: const Text('end'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                //
+              },
+              child: const Text('center'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                //
+              },
+              child: const Text('spaceBetween'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                //
+              },
+              child: const Text('spaceAround'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                //
+              },
+              child: const Text('spaceEvenly'),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }
