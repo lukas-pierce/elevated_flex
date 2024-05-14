@@ -60,6 +60,4 @@ class _ElevatedRowDelegate extends _ElevatedFlexDelegate {
       nextChildX += child.size.width + startAndShift.stepShift;
     }
   }
-
-
 }
