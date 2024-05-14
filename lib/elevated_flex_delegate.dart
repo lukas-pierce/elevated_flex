@@ -42,6 +42,16 @@ abstract class _ElevatedFlexDelegate extends BoxyDelegate {
     return children.map((child) => child.size.height).max;
   }
 
+  MainAxisAlignment get effectiveMainAxisAlignment {
+    // reverse mainAxisAlignment for up vertical direction
+    if (direction == Axis.vertical && verticalDirection == VerticalDirection.up) {
+      if (mainAxisAlignment == MainAxisAlignment.start) return MainAxisAlignment.end;
+      if (mainAxisAlignment == MainAxisAlignment.end) return MainAxisAlignment.start;
+    }
+
+    return mainAxisAlignment;
+  }
+
   ({double startX, double stepShift}) calcStartXAndShift() {
     switch (mainAxisSize) {
       case MainAxisSize.min:
