@@ -8,6 +8,7 @@ class ExampleSettings extends StatelessWidget {
     return Container(
       color: Colors.grey[400],
       child: SafeArea(
+        bottom: false,
         child: Theme(
           data: ThemeData(
             elevatedButtonTheme: ElevatedButtonThemeData(
