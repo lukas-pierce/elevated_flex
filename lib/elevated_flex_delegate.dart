@@ -224,9 +224,13 @@ class _ElevatedFlexDelegate extends BoxyDelegate {
 
   bool get isMainAxisSizeMax => mainAxisSize == MainAxisSize.max;
 
-  double get sumChildrenWidth => children.fold(0.0, (sum, child) => sum + child.size.width);
+  double get sumChildrenWidth => children.fold(0.0, (sum, child) {
+    return sum + child.size.width;
+  });
 
-  double get sumChildrenHeight => children.fold(0.0, (sum, child) => sum + child.size.height);
+  double get sumChildrenHeight => children.fold(0.0, (sum, child) {
+    return sum + child.size.height;
+  });
 
   double get maxChildrenWidth => children.map((child) => child.size.width).max;
 
