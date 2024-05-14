@@ -58,7 +58,7 @@ class SettingsPanel extends StatelessWidget {
                   selected: FlexSettings.of(context).state.mainAxisAlignment,
                   onChanged: (val) {
                     FlexSettings.of(context).setMainAxisAlignment(val);
-                  }
+                  },
                 ),
 
                 // crossAxisAlignment
@@ -69,7 +69,7 @@ class SettingsPanel extends StatelessWidget {
                   selected: FlexSettings.of(context).state.crossAxisAlignment,
                   onChanged: (val) {
                     FlexSettings.of(context).setCrossAxisAlignment(val);
-                  }
+                  },
                 ),
 
                 // verticalDirection
@@ -79,7 +79,7 @@ class SettingsPanel extends StatelessWidget {
                   selected: FlexSettings.of(context).state.verticalDirection,
                   onChanged: (val) {
                     FlexSettings.of(context).setVerticalDirection(val);
-                  }
+                  },
                 ),
               ],
             ),
