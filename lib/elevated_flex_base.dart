@@ -30,7 +30,7 @@ class ElevatedFlex extends StatelessWidget {
     final Map<int, Widget> indexedChildren = children.asMap();
 
     // sort children, move elevated widgets down
-    List<MapEntry<int, Widget>> sortedIndexedChildren = indexedChildren.entries.sorted((a, b) {
+    final sortedIndexedChildren = indexedChildren.entries.sorted((a, b) {
       final aWidget = a.value;
       final bWidget = b.value;
 
