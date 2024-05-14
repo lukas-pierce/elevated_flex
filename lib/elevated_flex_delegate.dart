@@ -59,7 +59,7 @@ abstract class _ElevatedFlexDelegate extends BoxyDelegate {
     for (int i = 0; i < childrenCount; i++) {
       final child = getChild(i);
       BoxConstraints childConstraints = constraints;
-      if (crossAxisAlignment == CrossAxisAlignment.stretch) {
+      if (effectiveCrossAxisAlignment == CrossAxisAlignment.stretch) {
         if (direction == Axis.vertical) {
           childConstraints = constraints.copyWith(minWidth: constraints.maxWidth);
         } else {
