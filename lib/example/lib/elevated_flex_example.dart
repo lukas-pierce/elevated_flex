@@ -126,9 +126,13 @@ class _RowsExample extends StatelessWidget {
 }
 
 class _ExampleContainer extends StatelessWidget {
-  const _ExampleContainer({required this.child});
+  const _ExampleContainer({
+    required this.child,
+    this.alignment = Alignment.center,
+  });
 
   final Widget child;
+  final AlignmentGeometry alignment;
 
   @override
   Widget build(BuildContext context) {
@@ -136,7 +140,7 @@ class _ExampleContainer extends StatelessWidget {
       decoration: BoxDecoration(border: Border.all(color: Colors.red)),
       padding: const EdgeInsets.all(20),
       child: Align(
-        alignment: Alignment.topCenter,
+        alignment: alignment,
         child: Container(
           decoration: BoxDecoration(border: Border.all(color: Colors.black, width: 1)),
           child: child,
