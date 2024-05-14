@@ -31,21 +31,13 @@ abstract class _ElevatedFlexDelegate extends BoxyDelegate {
   late final double width;
   late final double height;
 
-  double get sumChildrenWidth {
-    return children.fold(0.0, (sum, child) => sum + child.size.width);
-  }
+  double get sumChildrenWidth => children.fold(0.0, (sum, child) => sum + child.size.width);
 
-  double get sumChildrenHeight {
-    return children.fold(0.0, (sum, child) => sum + child.size.height);
-  }
+  double get sumChildrenHeight => children.fold(0.0, (sum, child) => sum + child.size.height);
 
-  double get maxChildrenWidth {
-    return children.map((child) => child.size.width).max;
-  }
+  double get maxChildrenWidth => children.map((child) => child.size.width).max;
 
-  double get maxChildrenHeight {
-    return children.map((child) => child.size.height).max;
-  }
+  double get maxChildrenHeight => children.map((child) => child.size.height).max;
 
   MainAxisAlignment get effectiveMainAxisAlignment {
     // reverse mainAxisAlignment for up vertical direction
