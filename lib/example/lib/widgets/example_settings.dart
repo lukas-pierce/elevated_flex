@@ -68,9 +68,7 @@ class _SettingItem<T extends Enum> extends StatelessWidget {
           children: [
             ...values.map((value) {
               return ElevatedButton(
-                onPressed: () {
-                  //
-                },
+                onPressed: onChanged != null ? () => onChanged?.call(value) : null,
                 statesController: MaterialStatesController()..value = {MaterialState.selected},
                 child: Text(value.name),
               );
