@@ -6,10 +6,12 @@ class InheritedSettings extends InheritedWidget {
   const InheritedSettings({
     super.key,
     required this.state,
+    required this.setMainAxisAlignment,
     required super.child,
   });
 
   final FlexSettingsState state;
+  final void Function(MainAxisAlignment) setMainAxisAlignment;
 
   static InheritedSettings? maybeOf(BuildContext context) {
     return context.dependOnInheritedWidgetOfExactType<InheritedSettings>();
@@ -38,8 +40,20 @@ class Settings extends StatefulWidget {
 }
 
 class _SettingsState extends State<Settings> {
+  FlexSettingsState state = const FlexSettingsState();
+
   @override
   Widget build(BuildContext context) {
-    return widget.child;
+    return InheritedSettings(
+      state: state,
+      setMainAxisAlignment: setMainAxisAlignment,
+      child: widget.child,
+    );
+  }
+
+  void setMainAxisAlignment(MainAxisAlignment val) {
+    setState(() {
+      state = state.copyWith(mainAxisAlignment: val);
+    });
   }
 }
