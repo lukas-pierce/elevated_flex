@@ -55,9 +55,7 @@ class SettingsPanel extends StatelessWidget {
                     _SettingItem<MainAxisAlignment>(
                       values: MainAxisAlignment.values,
                       selected: state.mainAxisAlignment,
-                      onChanged: (val) {
-                        FlexSettings.of(context).setMainAxisAlignment(val);
-                      },
+                      onChanged: (val) => FlexSettings.of(context).setMainAxisAlignment(val),
                     ),
 
                     // crossAxisAlignment
