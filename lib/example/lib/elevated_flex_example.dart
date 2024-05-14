@@ -107,7 +107,7 @@ class _RowsExample extends StatelessWidget {
         ),
         Expanded(
           child: _ExampleContainer(
-            child: Row(
+            child: ElevatedRow(
               mainAxisAlignment: mainAxisAlignment,
               mainAxisSize: mainAxisSize,
               crossAxisAlignment: crossAxisAlignment,
