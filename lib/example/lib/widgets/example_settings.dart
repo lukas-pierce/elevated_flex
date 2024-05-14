@@ -10,7 +10,7 @@ class ExampleSettings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.grey[400],
+      color: Colors.grey[300],
       width: double.infinity,
       child: SafeArea(
         bottom: false,
