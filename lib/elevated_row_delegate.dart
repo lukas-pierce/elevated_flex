@@ -120,7 +120,7 @@ class _ElevatedRowDelegate extends _ElevatedFlexDelegate {
     if (direction == Axis.vertical) {
       width = maxChildrenWidth;
     } else {
-      width = sumChildrenWidth;
+      width = (mainAxisSize == MainAxisSize.max) ? constraints.maxWidth : sumChildrenWidth;
     }
   }
 
