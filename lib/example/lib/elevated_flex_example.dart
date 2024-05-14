@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:elevated_flex/elevated_flex.dart';
 
+import 'example_settings.dart';
+
 class ElevatedFlexExample extends StatelessWidget {
   const ElevatedFlexExample({super.key});
 
@@ -10,6 +12,7 @@ class ElevatedFlexExample extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
+            ExampleSettings(),
             SizedBox(height: 20),
             Divider(height: 0),
             Expanded(child: _ColumnsExample()),
