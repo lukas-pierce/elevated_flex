@@ -64,6 +64,7 @@ class ElevatedFlexExample extends StatelessWidget {
                     onPressed: () {
                       //
                     },
+                    statesController: MaterialStatesController()..value = {MaterialState.selected},
                     child: const Text('start'),
                   ),
                   ElevatedButton(
