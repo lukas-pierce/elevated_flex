@@ -47,7 +47,7 @@ class _ElevatedFlexDelegate extends BoxyDelegate {
 
   CrossAxisAlignment get effectiveCrossAxisAlignment {
     // reverse crossAxisAlignment for up vertical direction
-    if (direction == Axis.horizontal && verticalDirection == VerticalDirection.up) {
+    if (isHorizontal && verticalDirection == VerticalDirection.up) {
       if (crossAxisAlignment == CrossAxisAlignment.start) {
         return CrossAxisAlignment.end;
       }
@@ -219,6 +219,8 @@ class _ElevatedFlexDelegate extends BoxyDelegate {
   }
 
   bool get isVertical => direction == Axis.vertical;
+
+  bool get isHorizontal => direction == Axis.horizontal;
 
   double get sumChildrenWidth => children.fold(0.0, (sum, child) => sum + child.size.width);
 
