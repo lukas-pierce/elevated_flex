@@ -8,8 +8,8 @@ abstract class _ElevatedFlexDelegate extends BoxyDelegate {
   final VerticalDirection verticalDirection;
 
   _ElevatedFlexDelegate({
-    super.relayout,
-    super.repaint,
+    // super.relayout,
+    // super.repaint,
     required this.direction,
     required this.mainAxisAlignment,
     required this.mainAxisSize,
