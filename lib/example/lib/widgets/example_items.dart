@@ -56,7 +56,11 @@ class ItemCenter extends StatelessWidget {
       alignment: Alignment.center,
       decoration: BoxDecoration(
         color: Colors.orange,
-        border: Border.all(color: Colors.red, width: 10, strokeAlign: BorderSide.strokeAlignOutside),
+        border: Border.all(
+          color: Colors.red,
+          width: 10,
+          strokeAlign: BorderSide.strokeAlignOutside,
+        ),
       ),
       child: const Text('center'),
     );
