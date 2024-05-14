@@ -35,10 +35,10 @@ class ElevatedRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<Widget> children;
-    if (verticalDirection == VerticalDirection.down) {
-      children = this.children;
-    } else {
+    if (verticalDirection == VerticalDirection.up) {
       children = this.children.reversed.toList();
+    } else {
+      children = this.children;
     }
 
     final Map<int, Widget> indexedChildren = children.asMap();
