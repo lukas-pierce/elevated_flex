@@ -32,7 +32,7 @@ class _ColumnsExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const MainAxisAlignment mainAxisAlignment = MainAxisAlignment.spaceEvenly;
+    const MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start;
     const MainAxisSize mainAxisSize = MainAxisSize.max;
     const CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center;
     const VerticalDirection verticalDirection = VerticalDirection.down;
