@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:elevated_flex/elevated_flex.dart';
 
-import 'example_settings.dart';
+import 'widgets/example_settings.dart';
 
 class ElevatedFlexExample extends StatelessWidget {
   const ElevatedFlexExample({super.key});
