@@ -37,7 +37,7 @@ class _ColumnsExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start;
-    const MainAxisSize mainAxisSize = MainAxisSize.max;
+    const MainAxisSize mainAxisSize = MainAxisSize.min;
     const CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center;
     const VerticalDirection verticalDirection = VerticalDirection.down;
 
@@ -86,7 +86,7 @@ class _RowsExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start;
-    const MainAxisSize mainAxisSize = MainAxisSize.max;
+    const MainAxisSize mainAxisSize = MainAxisSize.min;
     const CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center;
     const VerticalDirection verticalDirection = VerticalDirection.down;
 
