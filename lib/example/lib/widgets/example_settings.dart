@@ -60,6 +60,7 @@ class ExampleSettings extends StatelessWidget {
                     const Gap(10),
                     _SettingItem<CrossAxisAlignment>(
                       values: CrossAxisAlignment.values,
+                      disabledValues: const [CrossAxisAlignment.baseline],
                       selected: state.crossAxisAlignment,
                       onChanged: (val) => context.read<FlexSettingsCubit>().crossAxisAlignment = val,
                     ),
