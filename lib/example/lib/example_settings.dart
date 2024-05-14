@@ -71,43 +71,6 @@ class _SettingItem<T extends Enum> extends StatelessWidget {
                 child: Text(value.name),
               );
             }),
-            ElevatedButton(
-              onPressed: () {
-                //
-              },
-              statesController: MaterialStatesController()..value = {MaterialState.selected},
-              child: const Text('start'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                //
-              },
-              child: const Text('end'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                //
-              },
-              child: const Text('center'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                //
-              },
-              child: const Text('spaceBetween'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                //
-              },
-              child: const Text('spaceAround'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                //
-              },
-              child: const Text('spaceEvenly'),
-            ),
           ],
         ),
       ],
