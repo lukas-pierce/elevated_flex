@@ -107,7 +107,17 @@ class _RowsExample extends StatelessWidget {
         ),
         Expanded(
           child: _ExampleContainer(
-            child: Text('row2'),
+            child: Row(
+              mainAxisAlignment: mainAxisAlignment,
+              mainAxisSize: mainAxisSize,
+              crossAxisAlignment: crossAxisAlignment,
+              verticalDirection: verticalDirection,
+              children: [
+                Elevated(child: _Item1()),
+                _ItemCenter(),
+                Elevated(child: _Item2()),
+              ],
+            ),
           ),
         ),
       ],
