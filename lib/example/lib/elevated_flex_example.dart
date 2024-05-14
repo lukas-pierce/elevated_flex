@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:elevated_flex/elevated_flex.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'bloc/flex_settings_cubit.dart';
 import 'data/settings.dart';
 import 'widgets/settings_panel.dart';
 import 'widgets/example_items.dart';
