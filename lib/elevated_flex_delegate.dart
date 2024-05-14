@@ -63,13 +63,12 @@ class _ElevatedFlexDelegate extends BoxyDelegate {
     // remember children count
     childrenCount = children.length;
 
+    // constrains for each child
+    final childConstraints = getChildConstraints();
+
     // layout children with order according elevation
     for (int i = 0; i < childrenCount; i++) {
       final child = getChild(i);
-
-      // constrains for child
-      final childConstraints = getChildConstraints();
-
       child.layout(childConstraints);
     }
 
