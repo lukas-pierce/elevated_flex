@@ -36,4 +36,12 @@ final class FlexSettingsState {
         other.crossAxisAlignment == crossAxisAlignment &&
         other.verticalDirection == verticalDirection;
   }
+
+  @override
+  int get hashCode => Object.hash(
+        mainAxisAlignment,
+        mainAxisSize,
+        crossAxisAlignment,
+        verticalDirection,
+      );
 }
