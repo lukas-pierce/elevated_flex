@@ -47,47 +47,45 @@ class _ColumnsExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<FlexSettingsCubit, FlexSettingsState>(builder: (context, stateOld) {
-      final state = FlexSettings.of(context).state;
-      return Row(
-        children: [
-          Expanded(
-            child: _ExampleContainer(
-              title: 'Column',
-              alignment: Alignment.topCenter,
-              child: Column(
-                mainAxisAlignment: state.mainAxisAlignment,
-                mainAxisSize: state.mainAxisSize,
-                crossAxisAlignment: state.crossAxisAlignment,
-                verticalDirection: state.verticalDirection,
-                children: const [
-                  Elevated(child: Item1()),
-                  ItemCenter(),
-                  Elevated(child: Item2()),
-                ],
-              ),
+    final state = FlexSettings.of(context).state;
+    return Row(
+      children: [
+        Expanded(
+          child: _ExampleContainer(
+            title: 'Column',
+            alignment: Alignment.topCenter,
+            child: Column(
+              mainAxisAlignment: state.mainAxisAlignment,
+              mainAxisSize: state.mainAxisSize,
+              crossAxisAlignment: state.crossAxisAlignment,
+              verticalDirection: state.verticalDirection,
+              children: const [
+                Elevated(child: Item1()),
+                ItemCenter(),
+                Elevated(child: Item2()),
+              ],
             ),
           ),
-          Expanded(
-            child: _ExampleContainer(
-              title: 'ElevatedColumn',
-              alignment: Alignment.topCenter,
-              child: ElevatedColumn(
-                mainAxisAlignment: state.mainAxisAlignment,
-                mainAxisSize: state.mainAxisSize,
-                crossAxisAlignment: state.crossAxisAlignment,
-                verticalDirection: state.verticalDirection,
-                children: const [
-                  Elevated(child: Item1()),
-                  ItemCenter(),
-                  Elevated(child: Item2()),
-                ],
-              ),
+        ),
+        Expanded(
+          child: _ExampleContainer(
+            title: 'ElevatedColumn',
+            alignment: Alignment.topCenter,
+            child: ElevatedColumn(
+              mainAxisAlignment: state.mainAxisAlignment,
+              mainAxisSize: state.mainAxisSize,
+              crossAxisAlignment: state.crossAxisAlignment,
+              verticalDirection: state.verticalDirection,
+              children: const [
+                Elevated(child: Item1()),
+                ItemCenter(),
+                Elevated(child: Item2()),
+              ],
             ),
           ),
-        ],
-      );
-    });
+        ),
+      ],
+    );
   }
 }
 
@@ -96,47 +94,45 @@ class _RowsExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<FlexSettingsCubit, FlexSettingsState>(builder: (context, stateOld) {
-      final state = FlexSettings.of(context).state;
-      return Column(
-        children: [
-          Expanded(
-            child: _ExampleContainer(
-              title: 'Row',
-              alignment: Alignment.centerLeft,
-              child: Row(
-                mainAxisAlignment: state.mainAxisAlignment,
-                mainAxisSize: state.mainAxisSize,
-                crossAxisAlignment: state.crossAxisAlignment,
-                verticalDirection: state.verticalDirection,
-                children: const [
-                  Elevated(child: Item1()),
-                  ItemCenter(),
-                  Elevated(child: Item2()),
-                ],
-              ),
+    final state = FlexSettings.of(context).state;
+    return Column(
+      children: [
+        Expanded(
+          child: _ExampleContainer(
+            title: 'Row',
+            alignment: Alignment.centerLeft,
+            child: Row(
+              mainAxisAlignment: state.mainAxisAlignment,
+              mainAxisSize: state.mainAxisSize,
+              crossAxisAlignment: state.crossAxisAlignment,
+              verticalDirection: state.verticalDirection,
+              children: const [
+                Elevated(child: Item1()),
+                ItemCenter(),
+                Elevated(child: Item2()),
+              ],
             ),
           ),
-          Expanded(
-            child: _ExampleContainer(
-              title: 'ElevatedRow',
-              alignment: Alignment.centerLeft,
-              child: ElevatedRow(
-                mainAxisAlignment: state.mainAxisAlignment,
-                mainAxisSize: state.mainAxisSize,
-                crossAxisAlignment: state.crossAxisAlignment,
-                verticalDirection: state.verticalDirection,
-                children: const [
-                  Elevated(child: Item1()),
-                  ItemCenter(),
-                  Elevated(child: Item2()),
-                ],
-              ),
+        ),
+        Expanded(
+          child: _ExampleContainer(
+            title: 'ElevatedRow',
+            alignment: Alignment.centerLeft,
+            child: ElevatedRow(
+              mainAxisAlignment: state.mainAxisAlignment,
+              mainAxisSize: state.mainAxisSize,
+              crossAxisAlignment: state.crossAxisAlignment,
+              verticalDirection: state.verticalDirection,
+              children: const [
+                Elevated(child: Item1()),
+                ItemCenter(),
+                Elevated(child: Item2()),
+              ],
             ),
           ),
-        ],
-      );
-    });
+        ),
+      ],
+    );
   }
 }
 
