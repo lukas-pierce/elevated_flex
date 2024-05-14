@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../bloc/flex_settings_cubit.dart';
 
-class InheritedSettings extends InheritedWidget {
-  const InheritedSettings({
+class FlexSettings extends InheritedWidget {
+  const FlexSettings({
     super.key,
     required this.state,
     required this.setMainAxisAlignment,
@@ -19,18 +19,18 @@ class InheritedSettings extends InheritedWidget {
   final void Function(CrossAxisAlignment) setCrossAxisAlignment;
   final void Function(VerticalDirection) setVerticalDirection;
 
-  static InheritedSettings? maybeOf(BuildContext context) {
-    return context.dependOnInheritedWidgetOfExactType<InheritedSettings>();
+  static FlexSettings? maybeOf(BuildContext context) {
+    return context.dependOnInheritedWidgetOfExactType<FlexSettings>();
   }
 
-  static InheritedSettings of(BuildContext context) {
-    final InheritedSettings? result = maybeOf(context);
+  static FlexSettings of(BuildContext context) {
+    final FlexSettings? result = maybeOf(context);
     assert(result != null, 'No InheritedProduct found in context');
     return result!;
   }
 
   @override
-  bool updateShouldNotify(InheritedSettings oldWidget) => state != oldWidget.state;
+  bool updateShouldNotify(FlexSettings oldWidget) => state != oldWidget.state;
 }
 
 class Settings extends StatefulWidget {
@@ -50,7 +50,7 @@ class _SettingsState extends State<Settings> {
 
   @override
   Widget build(BuildContext context) {
-    return InheritedSettings(
+    return FlexSettings(
       state: state,
       setMainAxisAlignment: _setMainAxisAlignment,
       setMainAxisSize: _setMainAxisSize,
