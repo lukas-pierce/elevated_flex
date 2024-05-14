@@ -10,9 +10,8 @@ class ElevatedFlexExampleApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final c = Calculator();
-    print(c.addOne(1));
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Elevated Flex Example',
       home: ElevatedFlexExample(),
     );
