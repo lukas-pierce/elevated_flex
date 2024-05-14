@@ -169,12 +169,10 @@ class _ElevatedFlexDelegate extends BoxyDelegate {
             ),
 
           // readability
-          MainAxisAlignment.spaceBetween => () {
-              return (
-                startY: 0.0,
-                stepShift: freeSpaceHeight / (childrenCount - 1),
-              );
-            }(),
+          MainAxisAlignment.spaceBetween => (
+              startY: 0,
+              stepShift: freeSpaceHeight / (childrenCount - 1),
+            ),
 
           // readability
           MainAxisAlignment.spaceAround => () {
