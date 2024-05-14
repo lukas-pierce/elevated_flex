@@ -32,4 +32,13 @@ abstract class _ElevatedFlexDelegate extends BoxyDelegate {
   double get maxChildrenHeight {
     return children.map((child) => child.size.height).max;
   }
+
+  @override
+  bool shouldRelayout(_ElevatedFlexDelegate oldDelegate) {
+    return oldDelegate.direction != direction ||
+        oldDelegate.mainAxisAlignment != mainAxisAlignment ||
+        oldDelegate.mainAxisSize != mainAxisSize ||
+        oldDelegate.crossAxisAlignment != crossAxisAlignment ||
+        oldDelegate.verticalDirection != verticalDirection;
+  }
 }
