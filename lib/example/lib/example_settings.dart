@@ -6,7 +6,7 @@ class ExampleSettings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.grey,
+      color: Colors.grey[400],
       child: Theme(
         data: ThemeData(
           elevatedButtonTheme: ElevatedButtonThemeData(
