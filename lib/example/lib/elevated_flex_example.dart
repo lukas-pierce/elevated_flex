@@ -16,10 +16,10 @@ class ElevatedFlexExample extends StatelessWidget {
               selected: {1},
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.resolveWith((states) {
-                  if (states.contains(MaterialState.selected)) {
-                    return Colors.blue;
-                  }
-                  return Colors.white;
+                  return states.contains(MaterialState.selected) ? Colors.blue : Colors.white;
+                }),
+                foregroundColor: MaterialStateProperty.resolveWith((states) {
+                  return states.contains(MaterialState.selected) ? Colors.white : Colors.black;
                 }),
               ),
               segments: const [
