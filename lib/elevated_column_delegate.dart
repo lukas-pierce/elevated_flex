@@ -6,7 +6,9 @@ class _ElevatedColumnDelegate extends _ElevatedFlexDelegate {
     required this.mainAxisSize,
     required this.crossAxisAlignment,
     required this.verticalDirection,
-  });
+  }): super(
+    direction: Axis.vertical,
+  );
 
   final MainAxisAlignment mainAxisAlignment;
   final MainAxisSize mainAxisSize;

@@ -7,7 +7,7 @@ class _ElevatedRowDelegate extends _ElevatedFlexDelegate {
     required this.crossAxisAlignment,
     required this.verticalDirection,
   }): super(
-    direction: Axis.vertical,
+    direction: Axis.horizontal,
   );
 
   final MainAxisAlignment mainAxisAlignment;
