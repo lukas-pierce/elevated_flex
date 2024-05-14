@@ -45,9 +45,7 @@ class ExampleSettings extends StatelessWidget {
                     _SettingItem<MainAxisAlignment>(
                       values: MainAxisAlignment.values,
                       selected: state.mainAxisAlignment,
-                      onChanged: (val) {
-                        context.read<FlexSettingsCubit>().mainAxisAlignment = val;
-                      },
+                      onChanged: (val) => context.read<FlexSettingsCubit>().mainAxisAlignment = val,
                     ),
 
                     // mainAxisSize
@@ -55,9 +53,7 @@ class ExampleSettings extends StatelessWidget {
                     _SettingItem<MainAxisSize>(
                       values: MainAxisSize.values,
                       selected: state.mainAxisSize,
-                      onChanged: (val) {
-                        context.read<FlexSettingsCubit>().mainAxisSize = val;
-                      },
+                      onChanged: (val) => context.read<FlexSettingsCubit>().mainAxisSize = val,
                     ),
 
                     // crossAxisAlignment
@@ -65,9 +61,7 @@ class ExampleSettings extends StatelessWidget {
                     _SettingItem<CrossAxisAlignment>(
                       values: CrossAxisAlignment.values,
                       selected: state.crossAxisAlignment,
-                      onChanged: (val) {
-                        context.read<FlexSettingsCubit>().crossAxisAlignment = val;
-                      },
+                      onChanged: (val) => context.read<FlexSettingsCubit>().crossAxisAlignment = val,
                     ),
 
                     // verticalDirection
@@ -75,9 +69,7 @@ class ExampleSettings extends StatelessWidget {
                     _SettingItem<VerticalDirection>(
                       values: VerticalDirection.values,
                       selected: state.verticalDirection,
-                      onChanged: (val) {
-                        context.read<FlexSettingsCubit>().verticalDirection = val;
-                      },
+                      onChanged: (val) => context.read<FlexSettingsCubit>().verticalDirection = val,
                     ),
                   ],
                 );
