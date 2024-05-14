@@ -45,6 +45,7 @@ class _ColumnsExample extends StatelessWidget {
       children: [
         Expanded(
           child: _ExampleContainer(
+            alignment: Alignment.topCenter,
             child: Column(
               mainAxisAlignment: mainAxisAlignment,
               mainAxisSize: mainAxisSize,
@@ -60,6 +61,7 @@ class _ColumnsExample extends StatelessWidget {
         ),
         Expanded(
           child: _ExampleContainer(
+            alignment: Alignment.topCenter,
             child: ElevatedColumn(
               mainAxisAlignment: mainAxisAlignment,
               mainAxisSize: mainAxisSize,
@@ -92,6 +94,7 @@ class _RowsExample extends StatelessWidget {
       children: [
         Expanded(
           child: _ExampleContainer(
+            alignment: Alignment.centerLeft,
             child: Row(
               mainAxisAlignment: mainAxisAlignment,
               mainAxisSize: mainAxisSize,
@@ -107,6 +110,7 @@ class _RowsExample extends StatelessWidget {
         ),
         Expanded(
           child: _ExampleContainer(
+            alignment: Alignment.centerLeft,
             child: ElevatedRow(
               mainAxisAlignment: mainAxisAlignment,
               mainAxisSize: mainAxisSize,
