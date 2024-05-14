@@ -57,6 +57,22 @@ abstract class _ElevatedFlexDelegate extends BoxyDelegate {
     return Size(width, height);
   }
 
+  void calcWidth() {
+    if (direction == Axis.vertical) {
+      width = maxChildrenWidth;
+    } else {
+      width = (mainAxisSize == MainAxisSize.max) ? constraints.maxWidth : sumChildrenWidth;
+    }
+  }
+
+  void calcHeight() {
+    if (direction == Axis.vertical) {
+      height = (mainAxisSize == MainAxisSize.max) ? constraints.maxHeight : sumChildrenHeight;
+    } else {
+      height = maxChildrenHeight;
+    }
+  }
+
   double get sumChildrenWidth => children.fold(0.0, (sum, child) => sum + child.size.width);
 
   double get sumChildrenHeight => children.fold(0.0, (sum, child) => sum + child.size.height);
@@ -142,22 +158,6 @@ abstract class _ElevatedFlexDelegate extends BoxyDelegate {
               return (startX: spaceForChild, stepShift: spaceForChild);
             }(),
         };
-    }
-  }
-
-  void calcWidth() {
-    if (direction == Axis.vertical) {
-      width = maxChildrenWidth;
-    } else {
-      width = (mainAxisSize == MainAxisSize.max) ? constraints.maxWidth : sumChildrenWidth;
-    }
-  }
-
-  void calcHeight() {
-    if (direction == Axis.vertical) {
-      height = (mainAxisSize == MainAxisSize.max) ? constraints.maxHeight : sumChildrenHeight;
-    } else {
-      height = maxChildrenHeight;
     }
   }
 }
