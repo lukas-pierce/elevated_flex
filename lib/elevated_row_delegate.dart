@@ -6,9 +6,9 @@ class _ElevatedRowDelegate extends _ElevatedFlexDelegate {
     required this.mainAxisSize,
     required this.crossAxisAlignment,
     required this.verticalDirection,
-  }): super(
-    direction: Axis.horizontal,
-  );
+  }) : super(
+          direction: Axis.horizontal,
+        );
 
   final MainAxisAlignment mainAxisAlignment;
   final MainAxisSize mainAxisSize;
@@ -113,7 +113,11 @@ class _ElevatedRowDelegate extends _ElevatedFlexDelegate {
   }
 
   void calcWidth() {
-    width = maxChildrenWidth;
+    if (direction == Axis.vertical) {
+      width = maxChildrenWidth;
+    } else {
+      width = sumChildrenWidth;
+    }
   }
 
   void calcHeight() {
@@ -123,5 +127,4 @@ class _ElevatedRowDelegate extends _ElevatedFlexDelegate {
       height = sumChildrenHeight;
     }
   }
-
 }
