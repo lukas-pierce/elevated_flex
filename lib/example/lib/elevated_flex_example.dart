@@ -17,8 +17,6 @@ class ElevatedFlexExample extends StatelessWidget {
               top: false,
               child: Column(
                 children: [
-                  SizedBox(height: 20),
-                  Divider(height: 0),
                   Expanded(child: _ColumnsExample()),
                   Divider(height: 0),
                   Expanded(child: _RowsExample()),
