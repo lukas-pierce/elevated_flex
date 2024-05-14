@@ -121,9 +121,13 @@ class _SettingItem<T extends Enum> extends StatelessWidget {
                         onPressed: (!disabled && onChanged != null) ? () => onChanged?.call(value) : null,
                         statesController: value == selected ? MaterialStatesController({MaterialState.selected}) : null,
                         child: Text(value.name),
-                      )
+                      ),
+                      // <br>
+                      if (value == MainAxisAlignment.center) ...[
+                        const SizedBox(width: 1000),
+                      ],
                     ];
-                  }).expand((element) => element),
+                  }).expand((e) => e),
                 ],
               ),
             ),
