@@ -15,6 +15,26 @@ class _ElevatedRowDelegate extends _ElevatedFlexDelegate {
   void positionChildren() {
     if (direction == Axis.vertical) {
 
+      // for column
+      final startAndShift = calcStartYAndShift();
+      double nextChildY = startAndShift.startY;
+
+      for (int i = 0; i < childrenCount; i++) {
+        final child = getChild(i);
+
+        final double y = nextChildY;
+        final double x = switch (crossAxisAlignment) {
+          CrossAxisAlignment.start || CrossAxisAlignment.stretch || CrossAxisAlignment.baseline => 0,
+          CrossAxisAlignment.end => width - child.size.width,
+          CrossAxisAlignment.center => (width - child.size.width) / 2,
+        };
+
+        child.position(Offset(x, y));
+
+        // calc y offset for next child
+        nextChildY += child.size.height + startAndShift.stepShift;
+      }
+
     } else {
 
       // for row
