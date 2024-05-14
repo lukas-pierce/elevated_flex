@@ -1,8 +1,8 @@
 part of 'elevated_flex.dart';
 
-/// Вижет который строит колонку
-/// при этом какие-то дети могут быть выше остальных с позиции z-index
-/// для этого нужно этих детей обернуть в [Elevated]
+/// A widget that builds a column in which some
+/// children can be elevated relative to other children.
+/// To elevate then child, wrap it by [Elevated]
 class ElevatedColumn extends StatelessWidget {
   const ElevatedColumn({
     super.key,
