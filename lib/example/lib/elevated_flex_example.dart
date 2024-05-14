@@ -13,30 +13,27 @@ class ElevatedFlexExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: BlocProvider(
-        create: (context) => FlexSettingsCubit(),
-        child: FlexSettingsScope(
-          child: Builder(builder: (context) {
-            return const Column(
-              children: [
-                SettingsPanel(),
-                Expanded(
-                  child: SafeArea(
-                    top: false,
-                    bottom: false,
-                    child: Column(
-                      children: [
-                        Expanded(child: _ColumnsExample()),
-                        Divider(height: 0),
-                        Expanded(child: _RowsExample()),
-                      ],
-                    ),
+      body: FlexSettingsScope(
+        child: Builder(builder: (context) {
+          return const Column(
+            children: [
+              SettingsPanel(),
+              Expanded(
+                child: SafeArea(
+                  top: false,
+                  bottom: false,
+                  child: Column(
+                    children: [
+                      Expanded(child: _ColumnsExample()),
+                      Divider(height: 0),
+                      Expanded(child: _RowsExample()),
+                    ],
                   ),
                 ),
-              ],
-            );
-          }),
-        ),
+              ),
+            ],
+          );
+        }),
       ),
     );
   }
