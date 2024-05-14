@@ -10,32 +10,6 @@ class _ElevatedRowDelegate extends _ElevatedFlexDelegate {
           direction: Axis.horizontal,
         );
 
-  @override
-  Size layout() {
-    // remember children count
-    childrenCount = children.length;
-
-    // layout children with order according elevation
-    for (int i = 0; i < childrenCount; i++) {
-      final child = getChild(i);
-      BoxConstraints childConstraints = constraints;
-      if (crossAxisAlignment == CrossAxisAlignment.stretch) {
-        if (direction == Axis.vertical) {
-          childConstraints = constraints.copyWith(minWidth: constraints.maxWidth);
-        } else {
-          childConstraints = constraints.copyWith(minHeight: constraints.maxHeight);
-        }
-      }
-      child.layout(childConstraints);
-    }
-
-    calcWidth();
-    calcHeight();
-    positionChildren();
-
-    return Size(width, height);
-  }
-
   void positionChildren() {
     final startAndShift = calcStartXAndShift();
 
