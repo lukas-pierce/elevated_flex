@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../bloc/flex_settings_cubit.dart';
 
 class ExampleSettings extends StatelessWidget {
   const ExampleSettings({super.key});
@@ -30,14 +33,18 @@ class ExampleSettings extends StatelessWidget {
               ),
             ),
           ),
-          child: const Padding(
-            padding: EdgeInsets.all(10),
-            child: Column(
-              children: [
-                _SettingItem<MainAxisAlignment>(values: MainAxisAlignment.values),
-                // SizedBox(height: 20),
-                // _SettingItem(),
-              ],
+          child: Padding(
+            padding: const EdgeInsets.all(10),
+            child: BlocBuilder<FlexSettingsCubit, FlexSettingsState>(
+              builder: (context, state) {
+                return Column(
+                  children: [
+                    _SettingItem<MainAxisAlignment>(values: MainAxisAlignment.values),
+                    // SizedBox(height: 20),
+                    // _SettingItem(),
+                  ],
+                );
+              },
             ),
           ),
         ),
