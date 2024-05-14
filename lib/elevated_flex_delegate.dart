@@ -73,13 +73,7 @@ abstract class _ElevatedFlexDelegate extends BoxyDelegate {
     }
   }
 
-  double get sumChildrenWidth => children.fold(0.0, (sum, child) => sum + child.size.width);
-
-  double get sumChildrenHeight => children.fold(0.0, (sum, child) => sum + child.size.height);
-
-  double get maxChildrenWidth => children.map((child) => child.size.width).max;
-
-  double get maxChildrenHeight => children.map((child) => child.size.height).max;
+  void positionChildren();
 
   MainAxisAlignment get effectiveMainAxisAlignment {
     // reverse mainAxisAlignment for up vertical direction
@@ -160,4 +154,12 @@ abstract class _ElevatedFlexDelegate extends BoxyDelegate {
         };
     }
   }
+
+  double get sumChildrenWidth => children.fold(0.0, (sum, child) => sum + child.size.width);
+
+  double get sumChildrenHeight => children.fold(0.0, (sum, child) => sum + child.size.height);
+
+  double get maxChildrenWidth => children.map((child) => child.size.width).max;
+
+  double get maxChildrenHeight => children.map((child) => child.size.height).max;
 }
