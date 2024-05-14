@@ -43,30 +43,34 @@ class _ColumnsExample extends StatelessWidget {
 
     return const Row(
       children: [
-        _ExampleContainer(
-          child: Column(
-            mainAxisAlignment: mainAxisAlignment,
-            mainAxisSize: mainAxisSize,
-            crossAxisAlignment: crossAxisAlignment,
-            verticalDirection: verticalDirection,
-            children: [
-              Elevated(child: _Item1()),
-              _ItemCenter(),
-              Elevated(child: _Item2()),
-            ],
+        Expanded(
+          child: _ExampleContainer(
+            child: Column(
+              mainAxisAlignment: mainAxisAlignment,
+              mainAxisSize: mainAxisSize,
+              crossAxisAlignment: crossAxisAlignment,
+              verticalDirection: verticalDirection,
+              children: [
+                Elevated(child: _Item1()),
+                _ItemCenter(),
+                Elevated(child: _Item2()),
+              ],
+            ),
           ),
         ),
-        _ExampleContainer(
-          child: ElevatedColumn(
-            mainAxisAlignment: mainAxisAlignment,
-            mainAxisSize: mainAxisSize,
-            crossAxisAlignment: crossAxisAlignment,
-            verticalDirection: verticalDirection,
-            children: [
-              Elevated(child: _Item1()),
-              _ItemCenter(),
-              Elevated(child: _Item2()),
-            ],
+        Expanded(
+          child: _ExampleContainer(
+            child: ElevatedColumn(
+              mainAxisAlignment: mainAxisAlignment,
+              mainAxisSize: mainAxisSize,
+              crossAxisAlignment: crossAxisAlignment,
+              verticalDirection: verticalDirection,
+              children: [
+                Elevated(child: _Item1()),
+                _ItemCenter(),
+                Elevated(child: _Item2()),
+              ],
+            ),
           ),
         ),
       ],
@@ -96,7 +100,7 @@ class _ExampleContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // decoration: BoxDecoration(border: Border.all()),
+      // decoration: BoxDecoration(border: Border.all(color: Colors.red)),
       padding: const EdgeInsets.all(20),
       child: Align(
         alignment: Alignment.topCenter,
