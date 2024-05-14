@@ -1,3 +1,5 @@
+part of elevated_flex;
+
 class Elevated extends StatelessWidget {
   const Elevated({super.key, required this.child});
 
