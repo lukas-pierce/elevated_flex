@@ -20,15 +20,14 @@ class _ElevatedColumnDelegate extends _ElevatedFlexDelegate {
       final child = getChild(i);
 
       // for column
+      final double y = nextChildY;
       final double x = switch (crossAxisAlignment) {
         CrossAxisAlignment.start || CrossAxisAlignment.stretch || CrossAxisAlignment.baseline => 0,
         CrossAxisAlignment.end => width - child.size.width,
         CrossAxisAlignment.center => (width - child.size.width) / 2,
       };
-      final double y = nextChildY;
-      final offset = Offset(x, y);
 
-      child.position(offset);
+      child.position(Offset(x, y));
 
       // calc y offset for next child
       nextChildY += child.size.height + startAndShift.stepShift;
