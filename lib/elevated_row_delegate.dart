@@ -23,12 +23,12 @@ class _ElevatedRowDelegate extends _ElevatedFlexDelegate {
       final double x, y;
       if (direction == Axis.vertical) {
         // for column
-        final double x = switch (crossAxisAlignment) {
+        x = switch (crossAxisAlignment) {
           CrossAxisAlignment.start || CrossAxisAlignment.stretch || CrossAxisAlignment.baseline => 0,
           CrossAxisAlignment.end => width - child.size.width,
           CrossAxisAlignment.center => (width - child.size.width) / 2,
         };
-        final double y = nextChildY;
+        y = nextChildY;
       } else {
         // for row
         x = nextChildX;
