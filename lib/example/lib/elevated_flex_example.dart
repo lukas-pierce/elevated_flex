@@ -6,95 +6,16 @@ class ElevatedFlexExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SafeArea(
-        child: Theme(
-          data: ThemeData(
-            elevatedButtonTheme: ElevatedButtonThemeData(
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.resolveWith((states) {
-                  return states.contains(MaterialState.selected) ? Colors.blue : Colors.white;
-                }),
-                foregroundColor: MaterialStateProperty.resolveWith((states) {
-                  return states.contains(MaterialState.selected) ? Colors.white : Colors.black;
-                }),
-                shape: const MaterialStatePropertyAll(RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(0)),
-                )),
-                padding: const MaterialStatePropertyAll(EdgeInsets.symmetric(vertical: 3, horizontal: 5)),
-                textStyle: const MaterialStatePropertyAll(TextStyle(fontSize: 12, fontWeight: FontWeight.normal)),
-                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                minimumSize: const MaterialStatePropertyAll(Size(20, 20)),
-              ),
-            ),
-            segmentedButtonTheme: SegmentedButtonThemeData(
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.resolveWith((states) {
-                  return states.contains(MaterialState.selected) ? Colors.blue : Colors.white;
-                }),
-                foregroundColor: MaterialStateProperty.resolveWith((states) {
-                  return states.contains(MaterialState.selected) ? Colors.white : Colors.black;
-                }),
-                shape: const MaterialStatePropertyAll(RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                )),
-                padding: const MaterialStatePropertyAll(EdgeInsets.symmetric(vertical: 2, horizontal: 2)),
-                textStyle: const MaterialStatePropertyAll(TextStyle(fontSize: 12, fontWeight: FontWeight.normal)),
-              ),
-            ),
-          ),
-          child: Column(
-            children: [
-              const Text('mainAxisAlignment'),
-              Row(
-                children: [
-                  ElevatedButton(
-                    onPressed: () {
-                      //
-                    },
-                    statesController: MaterialStatesController()..value = {MaterialState.selected},
-                    child: const Text('start'),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      //
-                    },
-                    child: const Text('end'),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      //
-                    },
-                    child: const Text('center'),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      //
-                    },
-                    child: const Text('spaceBetween'),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      //
-                    },
-                    child: const Text('spaceAround'),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      //
-                    },
-                    child: const Text('spaceEvenly'),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 20),
-              const Divider(height: 0),
-              const Expanded(child: _ColumnsExample()),
-              const Divider(height: 0),
-              const Expanded(child: _RowsExample()),
-              // Spacer(),
-            ],
-          ),
+        child: Column(
+          children: [
+            SizedBox(height: 20),
+            Divider(height: 0),
+            Expanded(child: _ColumnsExample()),
+            Divider(height: 0),
+            Expanded(child: _RowsExample()),
+          ],
         ),
       ),
     );
