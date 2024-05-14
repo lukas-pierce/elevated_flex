@@ -20,11 +20,17 @@ class _ElevatedRowDelegate extends _ElevatedFlexDelegate {
     for (int i = 0; i < childrenCount; i++) {
       final child = getChild(i);
 
-      // for row
       final double x, y;
       if (direction == Axis.vertical) {
-
+        // for column
+        final double x = switch (crossAxisAlignment) {
+          CrossAxisAlignment.start || CrossAxisAlignment.stretch || CrossAxisAlignment.baseline => 0,
+          CrossAxisAlignment.end => width - child.size.width,
+          CrossAxisAlignment.center => (width - child.size.width) / 2,
+        };
+        final double y = nextChildY;
       } else {
+        // for row
         x = nextChildX;
         y = switch (crossAxisAlignment) {
           CrossAxisAlignment.start || CrossAxisAlignment.stretch || CrossAxisAlignment.baseline => 0,
