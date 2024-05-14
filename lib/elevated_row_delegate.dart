@@ -10,6 +10,7 @@ class _ElevatedRowDelegate extends _ElevatedFlexDelegate {
           direction: Axis.horizontal,
         );
 
+  /// positioning children with order according elevation
   @override
   void positionChildren() {
     if (direction == Axis.vertical) {
@@ -18,7 +19,6 @@ class _ElevatedRowDelegate extends _ElevatedFlexDelegate {
       final startAndShift = calcStartXAndShift();
       double nextChildX = startAndShift.startX;
 
-      // positioning children with order according elevation
       for (int i = 0; i < childrenCount; i++) {
         final child = getChild(i);
 

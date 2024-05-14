@@ -10,13 +10,12 @@ class _ElevatedColumnDelegate extends _ElevatedFlexDelegate {
           direction: Axis.vertical,
         );
 
+  /// positioning children with order according elevation
   @override
   void positionChildren() {
     final startAndShift = calcStartYAndShift();
-
     double nextChildY = startAndShift.startY;
 
-    // positioning children with order according elevation
     for (int i = 0; i < childrenCount; i++) {
       final child = getChild(i);
 
