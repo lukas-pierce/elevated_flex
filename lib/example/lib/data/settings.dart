@@ -62,4 +62,8 @@ class _SettingsState extends State<Settings> {
   void _setCrossAxisAlignment(CrossAxisAlignment val) {
     setState(() => state = state.copyWith(crossAxisAlignment: val));
   }
+
+  void _setVerticalDirection(VerticalDirection val) {
+    setState(() => state = state.copyWith(verticalDirection: val));
+  }
 }
