@@ -95,18 +95,18 @@ class _ElevatedRowDelegate extends BoxyDelegate {
       final child = getChild(i);
 
       // for row
-      final double x = switch (crossAxisAlignment) {
+      final double x = nextChildX;
+      final double y = switch (crossAxisAlignment) {
         CrossAxisAlignment.start || CrossAxisAlignment.stretch || CrossAxisAlignment.baseline => 0,
         CrossAxisAlignment.end => width - child.size.width,
         CrossAxisAlignment.center => (width - child.size.width) / 2,
       };
-      final double y = nextChildX;
       final offset = Offset(x, y);
 
       child.position(offset);
 
       // calc y offset for next child
-      nextChildX += child.size.height + startAndShift.stepShift;
+      nextChildX += child.size.width + startAndShift.stepShift;
     }
   }
 
