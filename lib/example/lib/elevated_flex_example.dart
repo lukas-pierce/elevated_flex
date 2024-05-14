@@ -10,6 +10,21 @@ class ElevatedFlexExample extends StatelessWidget {
       body: SafeArea(
         child: Theme(
           data: ThemeData(
+            elevatedButtonTheme: ElevatedButtonThemeData(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.resolveWith((states) {
+                  return states.contains(MaterialState.selected) ? Colors.blue : Colors.white;
+                }),
+                foregroundColor: MaterialStateProperty.resolveWith((states) {
+                  return states.contains(MaterialState.selected) ? Colors.white : Colors.black;
+                }),
+                shape: const MaterialStatePropertyAll(RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                )),
+                padding: const MaterialStatePropertyAll(EdgeInsets.symmetric(vertical: 2, horizontal: 2)),
+                textStyle: const MaterialStatePropertyAll(TextStyle(fontSize: 12, fontWeight: FontWeight.normal)),
+              ),
+            ),
             segmentedButtonTheme: SegmentedButtonThemeData(
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.resolveWith((states) {
