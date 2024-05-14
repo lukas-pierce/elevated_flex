@@ -31,6 +31,25 @@ abstract class _ElevatedFlexDelegate extends BoxyDelegate {
   late final double width;
   late final double height;
 
+  MainAxisAlignment get effectiveMainAxisAlignment {
+    // reverse mainAxisAlignment for up vertical direction
+    if (direction == Axis.vertical && verticalDirection == VerticalDirection.up) {
+      if (mainAxisAlignment == MainAxisAlignment.start) return MainAxisAlignment.end;
+      if (mainAxisAlignment == MainAxisAlignment.end) return MainAxisAlignment.start;
+    }
+
+    return mainAxisAlignment;
+  }
+
+  CrossAxisAlignment get effectiveCrossAxisAlignment {
+    // reverse crossAxisAlignment for up vertical direction
+    if (direction == Axis.horizontal && verticalDirection == VerticalDirection.up) {
+      if (crossAxisAlignment == CrossAxisAlignment.start) return CrossAxisAlignment.end;
+      if (crossAxisAlignment == CrossAxisAlignment.end) return CrossAxisAlignment.start;
+    }
+    return crossAxisAlignment;
+  }
+
   @override
   Size layout() {
     // remember children count
@@ -119,25 +138,6 @@ abstract class _ElevatedFlexDelegate extends BoxyDelegate {
         nextChildX += child.size.width + startAndShift.stepShift;
       }
     }
-  }
-
-  MainAxisAlignment get effectiveMainAxisAlignment {
-    // reverse mainAxisAlignment for up vertical direction
-    if (direction == Axis.vertical && verticalDirection == VerticalDirection.up) {
-      if (mainAxisAlignment == MainAxisAlignment.start) return MainAxisAlignment.end;
-      if (mainAxisAlignment == MainAxisAlignment.end) return MainAxisAlignment.start;
-    }
-
-    return mainAxisAlignment;
-  }
-
-  CrossAxisAlignment get effectiveCrossAxisAlignment {
-    // reverse crossAxisAlignment for up vertical direction
-    if (direction == Axis.horizontal && verticalDirection == VerticalDirection.up) {
-      if (crossAxisAlignment == CrossAxisAlignment.start) return CrossAxisAlignment.end;
-      if (crossAxisAlignment == CrossAxisAlignment.end) return CrossAxisAlignment.start;
-    }
-    return crossAxisAlignment;
   }
 
   ({double startY, double stepShift}) calcStartYAndShift() {
