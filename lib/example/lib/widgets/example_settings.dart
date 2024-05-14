@@ -69,6 +69,16 @@ class ExampleSettings extends StatelessWidget {
                         context.read<FlexSettingsCubit>().crossAxisAlignment = val;
                       },
                     ),
+
+                    // verticalDirection
+                    const Gap(20),
+                    _SettingItem<VerticalDirection>(
+                      values: VerticalDirection.values,
+                      selected: state.verticalDirection,
+                      onChanged: (val) {
+                        context.read<FlexSettingsCubit>().verticalDirection = val;
+                      },
+                    ),
                   ],
                 );
               },
