@@ -157,11 +157,11 @@ class _ExampleContainer extends StatelessWidget {
                 decoration: BoxDecoration(border: Border.all(color: Colors.black, width: 1)),
                 child: child,
               ),
-              const Positioned(
-                // left: 0,
-                top: -27,
-                child: Text('example', style: TextStyle(fontSize: 12, color: Colors.blueAccent)),
-              ),
+              if (title != null)
+                Positioned(
+                  top: -27,
+                  child: Text(title!, style: TextStyle(fontSize: 12, color: Colors.blueAccent)),
+                ),
             ],
           ),
         ),
