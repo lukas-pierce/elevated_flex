@@ -41,7 +41,7 @@ class ElevatedFlex extends StatelessWidget {
     });
 
     // convert children to BoxyId, but id saves their original order
-    final boxyChildren = sortedIndexedChildren.map((MapEntry<int, Widget> entry) {
+    final boxyChildren = sortedIndexedChildren.map((entry) {
       final index = entry.key;
       final child = entry.value;
 
