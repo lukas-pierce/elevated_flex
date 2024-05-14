@@ -46,7 +46,7 @@ class SettingsPanel extends StatelessWidget {
                     // mainAxisSize
                     _SettingItem<MainAxisSize>(
                       values: MainAxisSize.values,
-                      selected: state.mainAxisSize,
+                      selected: FlexSettings.of(context).state.mainAxisSize,
                       onChanged: (val) => FlexSettings.of(context).setMainAxisSize(val),
                     ),
 
@@ -54,7 +54,7 @@ class SettingsPanel extends StatelessWidget {
                     const Gap(10),
                     _SettingItem<MainAxisAlignment>(
                       values: MainAxisAlignment.values,
-                      selected: state.mainAxisAlignment,
+                      selected: FlexSettings.of(context).state.mainAxisAlignment,
                       onChanged: (val) => FlexSettings.of(context).setMainAxisAlignment(val),
                     ),
 
@@ -63,7 +63,7 @@ class SettingsPanel extends StatelessWidget {
                     _SettingItem<CrossAxisAlignment>(
                       values: CrossAxisAlignment.values,
                       disabledValues: const [CrossAxisAlignment.baseline],
-                      selected: state.crossAxisAlignment,
+                      selected: FlexSettings.of(context).state.crossAxisAlignment,
                       onChanged: (val) => FlexSettings.of(context).setCrossAxisAlignment(val),
                     ),
 
@@ -71,7 +71,7 @@ class SettingsPanel extends StatelessWidget {
                     const Gap(10),
                     _SettingItem<VerticalDirection>(
                       values: VerticalDirection.values,
-                      selected: state.verticalDirection,
+                      selected: FlexSettings.of(context).state.verticalDirection,
                       onChanged: (val) => FlexSettings.of(context).setVerticalDirection(val),
                     ),
                   ],
