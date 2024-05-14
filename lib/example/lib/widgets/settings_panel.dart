@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 
 import '../bloc/flex_settings_cubit.dart';
+import '../data/settings.dart';
 
 class SettingsPanel extends StatelessWidget {
   const SettingsPanel({super.key});
@@ -54,7 +55,9 @@ class SettingsPanel extends StatelessWidget {
                     _SettingItem<MainAxisAlignment>(
                       values: MainAxisAlignment.values,
                       selected: state.mainAxisAlignment,
-                      onChanged: (val) => context.read<FlexSettingsCubit>().mainAxisAlignment = val,
+                      onChanged: (val) {
+                        FlexSettings.of(context).setMainAxisAlignment(val);
+                      },
                     ),
 
                     // crossAxisAlignment
