@@ -29,12 +29,15 @@ class ExampleSettings extends StatelessWidget {
               ),
             ),
           ),
-          child: const Column(
-            children: [
-              _SettingItem(),
-              SizedBox(height: 20),
-              _SettingItem(),
-            ],
+          child: const Padding(
+            padding: EdgeInsets.all(10),
+            child: Column(
+              children: [
+                _SettingItem<MainAxisAlignment>(values: MainAxisAlignment.values),
+                // SizedBox(height: 20),
+                // _SettingItem(),
+              ],
+            ),
           ),
         ),
       ),
@@ -42,14 +45,18 @@ class ExampleSettings extends StatelessWidget {
   }
 }
 
-class _SettingItem extends StatelessWidget {
-  const _SettingItem();
+class _SettingItem<T extends Enum> extends StatelessWidget {
+  const _SettingItem({
+    required this.values,
+});
+
+  final List<T> values;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Text('mainAxisAlignment'),
+        Text('$T'),
         const SizedBox(height: 5),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
