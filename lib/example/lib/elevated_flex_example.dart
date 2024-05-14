@@ -3,7 +3,7 @@ import 'package:elevated_flex/elevated_flex.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'bloc/flex_settings_cubit.dart';
-import 'widgets/example_settings.dart';
+import 'widgets/settings_panel.dart';
 import 'widgets/example_items.dart';
 
 class ElevatedFlexExample extends StatelessWidget {
@@ -16,7 +16,7 @@ class ElevatedFlexExample extends StatelessWidget {
         create: (context) => FlexSettingsCubit(),
         child: const Column(
           children: [
-            ExampleSettings(),
+            SettingsPanel(),
             Expanded(
               child: SafeArea(
                 top: false,

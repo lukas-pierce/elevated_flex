@@ -4,8 +4,8 @@ import 'package:gap/gap.dart';
 
 import '../bloc/flex_settings_cubit.dart';
 
-class ExampleSettings extends StatelessWidget {
-  const ExampleSettings({super.key});
+class SettingsPanel extends StatelessWidget {
+  const SettingsPanel({super.key});
 
   @override
   Widget build(BuildContext context) {
