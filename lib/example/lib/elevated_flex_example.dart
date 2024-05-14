@@ -20,6 +20,7 @@ class ElevatedFlexExample extends StatelessWidget {
             Expanded(
               child: SafeArea(
                 top: false,
+                bottom: false,
                 child: Column(
                   children: [
                     Expanded(child: _ColumnsExample()),
