@@ -19,9 +19,11 @@ class ExampleSettings extends StatelessWidget {
             elevatedButtonTheme: ElevatedButtonThemeData(
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.resolveWith((states) {
+                  if (states.contains(MaterialState.disabled)) return Colors.white.withOpacity(0.5);
                   return states.contains(MaterialState.selected) ? Colors.blue : Colors.white;
                 }),
                 foregroundColor: MaterialStateProperty.resolveWith((states) {
+                  if (states.contains(MaterialState.disabled)) return Colors.grey;
                   return states.contains(MaterialState.selected) ? Colors.white : Colors.black;
                 }),
                 shape: const MaterialStatePropertyAll(RoundedRectangleBorder(
@@ -40,7 +42,6 @@ class ExampleSettings extends StatelessWidget {
               builder: (context, state) {
                 return Column(
                   children: [
-
                     // mainAxisSize
                     _SettingItem<MainAxisSize>(
                       values: MainAxisSize.values,
