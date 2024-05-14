@@ -1,5 +1,5 @@
 name: elevated_flex
-description: "A new Flutter package project."
+description: "Column and Row with z-index elevated children"
 version: 0.0.1
 homepage: https://github.com/lukas-pierce/elevated_flex
 
