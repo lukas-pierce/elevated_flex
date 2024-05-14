@@ -10,11 +10,6 @@ class _ElevatedColumnDelegate extends _ElevatedFlexDelegate {
           direction: Axis.vertical,
         );
 
-  // inner calculation
-  late final int childrenCount;
-  late final double width;
-  late final double height;
-
   @override
   Size layout() {
     // remember children count
