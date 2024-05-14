@@ -8,27 +8,35 @@ class ElevatedFlexExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.all(0),
-          child: Column(
-            children: [
-              Text('mainAxisAlignment'),
-              SegmentedButton(
-                selected: {1},
-                segments: [
-                  ButtonSegment(
-                    value: 1,
-                    label: Text('dssd'),
-                  ),
-                ],
+        child: Column(
+          children: [
+            Text('mainAxisAlignment'),
+            SegmentedButton(
+              showSelectedIcon: false,
+              selected: {1},
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.resolveWith((states) {
+                  if (states.contains(MaterialState.selected)) {
+                    return Colors.blue;
+                  }
+                  return Colors.white;
+                }),
               ),
-              Divider(height: 0),
-              Expanded(child: _ColumnsExample()),
-              Divider(height: 0),
-              Expanded(child: _RowsExample()),
-              // Spacer(),
-            ],
-          ),
+              segments: const [
+                ButtonSegment(value: 1, label: Text('start')),
+                ButtonSegment(value: 2, label: Text('end')),
+                ButtonSegment(value: 3, label: Text('center')),
+                ButtonSegment(value: 4, label: Text('spaceBetween')),
+                ButtonSegment(value: 5, label: Text('spaceAround')),
+                ButtonSegment(value: 6, label: Text('spaceEvenly')),
+              ],
+            ),
+            Divider(height: 0),
+            Expanded(child: _ColumnsExample()),
+            Divider(height: 0),
+            Expanded(child: _RowsExample()),
+            // Spacer(),
+          ],
         ),
       ),
     );
