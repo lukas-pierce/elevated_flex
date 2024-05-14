@@ -113,3 +113,58 @@ class _Example extends StatelessWidget {
     );
   }
 }
+
+class _Item1 extends StatelessWidget {
+  const _Item1();
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(5),
+      height: 50,
+      width: 50,
+      alignment: Alignment.center,
+      decoration: const BoxDecoration(
+        color: Colors.cyan,
+      ),
+      child: const Text('item1 (want top)', style: TextStyle(fontSize: 10), textAlign: TextAlign.center),
+    );
+  }
+}
+
+class _ItemCenter extends StatelessWidget {
+  const _ItemCenter();
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(10),
+      height: 100,
+      width: 100,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: Colors.pinkAccent.withOpacity(0.5),
+        border: Border.all(color: Colors.red, width: 10, strokeAlign: BorderSide.strokeAlignOutside),
+      ),
+      child: const Text('center'),
+    );
+  }
+}
+
+class _Item2 extends StatelessWidget {
+  const _Item2();
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(5),
+      height: 50,
+      width: 50,
+      alignment: Alignment.center,
+      decoration: const BoxDecoration(
+        color: Colors.lightGreen,
+      ),
+      child: const Text('item2 (want top)', style: TextStyle(fontSize: 10), textAlign: TextAlign.center),
+    );
+  }
+}
