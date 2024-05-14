@@ -3,6 +3,7 @@ import 'package:elevated_flex/elevated_flex.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'bloc/flex_settings_cubit.dart';
+import 'data/settings.dart';
 import 'widgets/settings_panel.dart';
 import 'widgets/example_items.dart';
 
@@ -14,23 +15,27 @@ class ElevatedFlexExample extends StatelessWidget {
     return Scaffold(
       body: BlocProvider(
         create: (context) => FlexSettingsCubit(),
-        child: const Column(
-          children: [
-            SettingsPanel(),
-            Expanded(
-              child: SafeArea(
-                top: false,
-                bottom: false,
-                child: Column(
-                  children: [
-                    Expanded(child: _ColumnsExample()),
-                    Divider(height: 0),
-                    Expanded(child: _RowsExample()),
-                  ],
+        child: FlexSettingsScope(
+          child: Builder(builder: (context) {
+            return const Column(
+              children: [
+                SettingsPanel(),
+                Expanded(
+                  child: SafeArea(
+                    top: false,
+                    bottom: false,
+                    child: Column(
+                      children: [
+                        Expanded(child: _ColumnsExample()),
+                        Divider(height: 0),
+                        Expanded(child: _RowsExample()),
+                      ],
+                    ),
+                  ),
                 ),
-              ),
-            ),
-          ],
+              ],
+            );
+          }),
         ),
       ),
     );
@@ -42,7 +47,8 @@ class _ColumnsExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<FlexSettingsCubit, FlexSettingsState>(builder: (context, state) {
+    return BlocBuilder<FlexSettingsCubit, FlexSettingsState>(builder: (context, stateOld) {
+      final state = FlexSettings.of(context).state;
       return Row(
         children: [
           Expanded(
