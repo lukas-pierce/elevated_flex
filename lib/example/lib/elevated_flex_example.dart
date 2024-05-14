@@ -11,10 +11,21 @@ class ElevatedFlexExample extends StatelessWidget {
         child: DefaultTextStyle.merge(
           style: const TextStyle(fontSize: 10),
           textAlign: TextAlign.center,
-          child: const Padding(
+          child: Padding(
             padding: EdgeInsets.all(0),
             child: Column(
               children: [
+                Text('mainAxisAlignment'),
+                SegmentedButton(
+                  selected: {1},
+                  segments: [
+                    ButtonSegment(
+                      value: 1,
+                      label: Text('dssd'),
+                    ),
+                  ],
+                ),
+                Divider(height: 0),
                 Expanded(child: _ColumnsExample()),
                 Divider(height: 0),
                 Expanded(child: _RowsExample()),
@@ -136,14 +147,18 @@ class _ExampleContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      // decoration: BoxDecoration(border: Border.all(color: Colors.red)),
-      padding: const EdgeInsets.all(20),
-      child: Align(
-        alignment: alignment,
-        child: Container(
-          decoration: BoxDecoration(border: Border.all(color: Colors.black, width: 1)),
-          child: child,
+    return DefaultTextStyle.merge(
+      style: const TextStyle(fontSize: 10),
+      textAlign: TextAlign.center,
+      child: Container(
+        // decoration: BoxDecoration(border: Border.all(color: Colors.red)),
+        padding: const EdgeInsets.all(20),
+        child: Align(
+          alignment: alignment,
+          child: Container(
+            decoration: BoxDecoration(border: Border.all(color: Colors.black, width: 1)),
+            child: child,
+          ),
         ),
       ),
     );
