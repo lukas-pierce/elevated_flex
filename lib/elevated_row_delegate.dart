@@ -12,39 +12,43 @@ class _ElevatedRowDelegate extends _ElevatedFlexDelegate {
 
   @override
   void positionChildren() {
-    final startAndShift = calcStartXAndShift();
+    if (direction == Axis.vertical) {
 
-    double nextChildMainCoord = startAndShift.startX;
+    } else {
+      final startAndShift = calcStartXAndShift();
 
-    // positioning children with order according elevation
-    for (int i = 0; i < childrenCount; i++) {
-      final child = getChild(i);
+      double nextChildMainCoord = startAndShift.startX;
 
-      final double x, y;
-      if (direction == Axis.vertical) {
-        // for column
-        x = switch (crossAxisAlignment) {
-          CrossAxisAlignment.start || CrossAxisAlignment.stretch || CrossAxisAlignment.baseline => 0,
-          CrossAxisAlignment.end => width - child.size.width,
-          CrossAxisAlignment.center => (width - child.size.width) / 2,
-        };
-        y = nextChildY;
-      } else {
-        // for row
-        x = nextChildMainCoord;
-        y = switch (crossAxisAlignment) {
-          CrossAxisAlignment.start || CrossAxisAlignment.stretch || CrossAxisAlignment.baseline => 0,
-          CrossAxisAlignment.end => height - child.size.height,
-          CrossAxisAlignment.center => (height - child.size.height) / 2,
-        };
+      // positioning children with order according elevation
+      for (int i = 0; i < childrenCount; i++) {
+        final child = getChild(i);
+
+        final double x, y;
+        if (direction == Axis.vertical) {
+          // for column
+          x = switch (crossAxisAlignment) {
+            CrossAxisAlignment.start || CrossAxisAlignment.stretch || CrossAxisAlignment.baseline => 0,
+            CrossAxisAlignment.end => width - child.size.width,
+            CrossAxisAlignment.center => (width - child.size.width) / 2,
+          };
+          y = nextChildY;
+        } else {
+          // for row
+          x = nextChildMainCoord;
+          y = switch (crossAxisAlignment) {
+            CrossAxisAlignment.start || CrossAxisAlignment.stretch || CrossAxisAlignment.baseline => 0,
+            CrossAxisAlignment.end => height - child.size.height,
+            CrossAxisAlignment.center => (height - child.size.height) / 2,
+          };
+        }
+
+        final offset = Offset(x, y);
+
+        child.position(offset);
+
+        // calc y offset for next child
+        nextChildMainCoord += child.size.width + startAndShift.stepShift;
       }
-
-      final offset = Offset(x, y);
-
-      child.position(offset);
-
-      // calc y offset for next child
-      nextChildMainCoord += child.size.width + startAndShift.stepShift;
     }
   }
 }
