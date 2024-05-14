@@ -68,7 +68,7 @@ class _SettingItem<T extends Enum> extends StatelessWidget {
                   //
                 },
                 statesController: MaterialStatesController()..value = {MaterialState.selected},
-                child: const Text('start'),
+                child: Text(value.name),
               );
             }),
             ElevatedButton(
