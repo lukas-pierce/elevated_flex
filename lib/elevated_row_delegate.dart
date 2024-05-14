@@ -24,23 +24,13 @@ class _ElevatedRowDelegate extends _ElevatedFlexDelegate {
         final child = getChild(i);
 
         final double x, y;
-        if (direction == Axis.vertical) {
-          // for column
-          x = switch (crossAxisAlignment) {
-            CrossAxisAlignment.start || CrossAxisAlignment.stretch || CrossAxisAlignment.baseline => 0,
-            CrossAxisAlignment.end => width - child.size.width,
-            CrossAxisAlignment.center => (width - child.size.width) / 2,
-          };
-          y = nextChildY;
-        } else {
-          // for row
-          x = nextChildMainCoord;
-          y = switch (crossAxisAlignment) {
-            CrossAxisAlignment.start || CrossAxisAlignment.stretch || CrossAxisAlignment.baseline => 0,
-            CrossAxisAlignment.end => height - child.size.height,
-            CrossAxisAlignment.center => (height - child.size.height) / 2,
-          };
-        }
+        // for row
+        x = nextChildMainCoord;
+        y = switch (crossAxisAlignment) {
+          CrossAxisAlignment.start || CrossAxisAlignment.stretch || CrossAxisAlignment.baseline => 0,
+          CrossAxisAlignment.end => height - child.size.height,
+          CrossAxisAlignment.center => (height - child.size.height) / 2,
+        };
 
         final offset = Offset(x, y);
 
