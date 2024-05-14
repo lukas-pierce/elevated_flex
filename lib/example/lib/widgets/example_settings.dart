@@ -54,6 +54,14 @@ class ExampleSettings extends StatelessWidget {
                         context.read<FlexSettingsCubit>().mainAxisSize = val;
                       },
                     ),
+                    const SizedBox(height: 20),
+                    _SettingItem<CrossAxisAlignment>(
+                      values: CrossAxisAlignment.values,
+                      selected: state.crossAxisAlignment,
+                      onChanged: (val) {
+                        context.read<FlexSettingsCubit>().crossAxisAlignment = val;
+                      },
+                    ),
                   ],
                 );
               },
