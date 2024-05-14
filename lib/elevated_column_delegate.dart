@@ -39,7 +39,7 @@ class _ElevatedColumnDelegate extends _ElevatedFlexDelegate {
 
   MainAxisAlignment get effectiveMainAxisAlignment {
     // reverse mainAxisAlignment for up vertical direction
-    if (verticalDirection == VerticalDirection.up) {
+    if (direction == Axis.vertical && verticalDirection == VerticalDirection.up) {
       if (mainAxisAlignment == MainAxisAlignment.start) return MainAxisAlignment.end;
       if (mainAxisAlignment == MainAxisAlignment.end) return MainAxisAlignment.start;
     }
