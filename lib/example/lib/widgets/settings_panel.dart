@@ -42,7 +42,9 @@ class SettingsPanel extends StatelessWidget {
                 _SettingItem<MainAxisSize>(
                   values: MainAxisSize.values,
                   selected: FlexSettings.of(context).state.mainAxisSize,
-                  onChanged: (val) => FlexSettings.of(context).setMainAxisSize(val),
+                  onChanged: (val) {
+                    FlexSettings.of(context).setMainAxisSize(val);
+                  },
                 ),
 
                 // mainAxisAlignment
@@ -50,7 +52,9 @@ class SettingsPanel extends StatelessWidget {
                 _SettingItem<MainAxisAlignment>(
                   values: MainAxisAlignment.values,
                   selected: FlexSettings.of(context).state.mainAxisAlignment,
-                  onChanged: (val) => FlexSettings.of(context).setMainAxisAlignment(val),
+                  onChanged: (val) {
+                    FlexSettings.of(context).setMainAxisAlignment(val);
+                  }
                 ),
 
                 // crossAxisAlignment
@@ -59,7 +63,9 @@ class SettingsPanel extends StatelessWidget {
                   values: CrossAxisAlignment.values,
                   disabledValues: const [CrossAxisAlignment.baseline],
                   selected: FlexSettings.of(context).state.crossAxisAlignment,
-                  onChanged: (val) => FlexSettings.of(context).setCrossAxisAlignment(val),
+                  onChanged: (val) {
+                    FlexSettings.of(context).setCrossAxisAlignment(val);
+                  }
                 ),
 
                 // verticalDirection
@@ -67,7 +73,9 @@ class SettingsPanel extends StatelessWidget {
                 _SettingItem<VerticalDirection>(
                   values: VerticalDirection.values,
                   selected: FlexSettings.of(context).state.verticalDirection,
-                  onChanged: (val) => FlexSettings.of(context).setVerticalDirection(val),
+                  onChanged: (val) {
+                    FlexSettings.of(context).setVerticalDirection(val);
+                  }
                 ),
               ],
             ),
