@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of 'elevated_flex.dart';
 
 class ElevatedFlex extends StatelessWidget {
   const ElevatedFlex({
