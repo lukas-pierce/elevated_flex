@@ -33,8 +33,8 @@ class FlexSettings extends InheritedWidget {
   bool updateShouldNotify(FlexSettings oldWidget) => state != oldWidget.state;
 }
 
-class Settings extends StatefulWidget {
-  const Settings({
+class FlexSettingsScope extends StatefulWidget {
+  const FlexSettingsScope({
     super.key,
     required this.child,
   });
@@ -42,10 +42,10 @@ class Settings extends StatefulWidget {
   final Widget child;
 
   @override
-  State<Settings> createState() => _SettingsState();
+  State<FlexSettingsScope> createState() => _FlexSettingsScopeState();
 }
 
-class _SettingsState extends State<Settings> {
+class _FlexSettingsScopeState extends State<FlexSettingsScope> {
   FlexSettingsState state = const FlexSettingsState();
 
   @override
