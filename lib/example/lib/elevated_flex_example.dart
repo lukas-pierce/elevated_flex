@@ -162,7 +162,13 @@ class _ExampleContainer extends StatelessWidget {
               if (title != null)
                 Positioned(
                   top: -27,
-                  child: Text(title!, style: const TextStyle(fontSize: 12, color: Colors.black)),
+                  child: Text(
+                    title!,
+                    style: const TextStyle(
+                      fontSize: 12,
+                      color: Colors.black,
+                    ),
+                  ),
                 ),
             ],
           ),
