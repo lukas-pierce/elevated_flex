@@ -27,4 +27,13 @@ final class FlexSettingsState {
       verticalDirection: verticalDirection ?? this.verticalDirection,
     );
   }
+
+  @override
+  bool operator ==(Object other) {
+    return other is FlexSettingsState &&
+        other.mainAxisAlignment == mainAxisAlignment &&
+        other.mainAxisSize == mainAxisSize &&
+        other.crossAxisAlignment == crossAxisAlignment &&
+        other.verticalDirection == verticalDirection;
+  }
 }
