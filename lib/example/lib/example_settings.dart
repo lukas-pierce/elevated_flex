@@ -7,32 +7,34 @@ class ExampleSettings extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.grey[400],
-      child: Theme(
-        data: ThemeData(
-          elevatedButtonTheme: ElevatedButtonThemeData(
-            style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.resolveWith((states) {
-                return states.contains(MaterialState.selected) ? Colors.blue : Colors.white;
-              }),
-              foregroundColor: MaterialStateProperty.resolveWith((states) {
-                return states.contains(MaterialState.selected) ? Colors.white : Colors.black;
-              }),
-              shape: const MaterialStatePropertyAll(RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(0)),
-              )),
-              padding: const MaterialStatePropertyAll(EdgeInsets.symmetric(vertical: 3, horizontal: 5)),
-              textStyle: const MaterialStatePropertyAll(TextStyle(fontSize: 12, fontWeight: FontWeight.normal)),
-              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-              minimumSize: const MaterialStatePropertyAll(Size(20, 20)),
+      child: SafeArea(
+        child: Theme(
+          data: ThemeData(
+            elevatedButtonTheme: ElevatedButtonThemeData(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.resolveWith((states) {
+                  return states.contains(MaterialState.selected) ? Colors.blue : Colors.white;
+                }),
+                foregroundColor: MaterialStateProperty.resolveWith((states) {
+                  return states.contains(MaterialState.selected) ? Colors.white : Colors.black;
+                }),
+                shape: const MaterialStatePropertyAll(RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(0)),
+                )),
+                padding: const MaterialStatePropertyAll(EdgeInsets.symmetric(vertical: 3, horizontal: 5)),
+                textStyle: const MaterialStatePropertyAll(TextStyle(fontSize: 12, fontWeight: FontWeight.normal)),
+                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                minimumSize: const MaterialStatePropertyAll(Size(20, 20)),
+              ),
             ),
           ),
-        ),
-        child: const Column(
-          children: [
-            _SettingItem(),
-            SizedBox(height: 20),
-            _SettingItem(),
-          ],
+          child: const Column(
+            children: [
+              _SettingItem(),
+              SizedBox(height: 20),
+              _SettingItem(),
+            ],
+          ),
         ),
       ),
     );
