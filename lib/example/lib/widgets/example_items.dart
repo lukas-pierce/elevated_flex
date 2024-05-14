@@ -6,8 +6,8 @@ const _shadow = BoxShadow(
   color: Colors.black87,
 );
 
-class _Item1 extends StatelessWidget {
-  const _Item1();
+class Item1 extends StatelessWidget {
+  const Item1();
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +25,8 @@ class _Item1 extends StatelessWidget {
   }
 }
 
-class _Item2 extends StatelessWidget {
-  const _Item2();
+class Item2 extends StatelessWidget {
+  const Item2();
 
   @override
   Widget build(BuildContext context) {
@@ -44,8 +44,8 @@ class _Item2 extends StatelessWidget {
   }
 }
 
-class _ItemCenter extends StatelessWidget {
-  const _ItemCenter();
+class ItemCenter extends StatelessWidget {
+  const ItemCenter();
 
   @override
   Widget build(BuildContext context) {
