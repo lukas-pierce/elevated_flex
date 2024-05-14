@@ -1,7 +1,7 @@
 part of 'elevated_flex.dart';
 
-class _ElevatedColumnDelegate extends BoxyDelegate {
-  _ElevatedColumnDelegate({
+class _ElevatedRowDelegate extends BoxyDelegate {
+  _ElevatedRowDelegate({
     required this.mainAxisAlignment,
     required this.mainAxisSize,
     required this.crossAxisAlignment,
@@ -20,7 +20,7 @@ class _ElevatedColumnDelegate extends BoxyDelegate {
 
   @override
   Size layout() {
-    // remember chidren count
+    // remember children count
     childrenCount = children.length;
 
     // layout children with order according elevation
