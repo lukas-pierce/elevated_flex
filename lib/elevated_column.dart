@@ -26,6 +26,7 @@ class ElevatedColumn extends StatelessWidget {
     this.children = const <Widget>[],
   });
 
+  final Axis direction = Axis.vertical;
   final MainAxisAlignment mainAxisAlignment;
   final MainAxisSize mainAxisSize;
   final CrossAxisAlignment crossAxisAlignment;
@@ -35,7 +36,7 @@ class ElevatedColumn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<Widget> children;
-    if (verticalDirection == VerticalDirection.down) {
+    if (direction == Axis.vertical && verticalDirection == VerticalDirection.down) {
       children = this.children;
     } else {
       children = this.children.reversed.toList();
