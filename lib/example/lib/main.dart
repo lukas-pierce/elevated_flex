@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:elevated_flex/elevated_flex.dart';
 
 void main() {
   runApp(const ElevatedFlexExampleApp());
@@ -7,9 +8,10 @@ void main() {
 class ElevatedFlexExampleApp extends StatelessWidget {
   const ElevatedFlexExampleApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    final c = Calculator();
+    print(c.addOne(1));
     return const MaterialApp(
       title: 'Elevated Flex Example',
       home: ElevatedFlexExample(),
