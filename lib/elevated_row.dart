@@ -28,4 +28,3 @@ class ElevatedRow extends ElevatedFlex {
     direction: Axis.vertical,
   );
 }
-
