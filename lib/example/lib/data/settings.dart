@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 
-class InheritedProduct extends InheritedWidget {
-  const InheritedProduct({
+class InheritedSettings extends InheritedWidget {
+  const InheritedSettings({
     super.key,
     required super.child,
   });
 
-  static InheritedProduct? maybeOf(BuildContext context) {
-    return context.dependOnInheritedWidgetOfExactType<InheritedProduct>();
+  static InheritedSettings? maybeOf(BuildContext context) {
+    return context.dependOnInheritedWidgetOfExactType<InheritedSettings>();
   }
 
-  static InheritedProduct of(BuildContext context) {
-    final InheritedProduct? result = maybeOf(context);
+  static InheritedSettings of(BuildContext context) {
+    final InheritedSettings? result = maybeOf(context);
     assert(result != null, 'No InheritedProduct found in context');
     return result!;
   }
 
   @override
-  bool updateShouldNotify(InheritedProduct oldWidget) => product != oldWidget.product;
+  bool updateShouldNotify(InheritedSettings oldWidget) => product != oldWidget.product;
 }
