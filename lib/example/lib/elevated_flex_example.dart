@@ -20,7 +20,7 @@ class ElevatedFlexExample extends StatelessWidget {
               Expanded(
                 child: Row(
                   children: [
-                    _Example(
+                    _ExampleContainer(
                       child: Column(
                         mainAxisAlignment: mainAxisAlignment,
                         mainAxisSize: mainAxisSize,
@@ -33,7 +33,7 @@ class ElevatedFlexExample extends StatelessWidget {
                         ],
                       ),
                     ),
-                    _Example(
+                    _ExampleContainer(
                       child: ElevatedColumn(
                         mainAxisAlignment: mainAxisAlignment,
                         mainAxisSize: mainAxisSize,
@@ -53,7 +53,7 @@ class ElevatedFlexExample extends StatelessWidget {
               Expanded(
                 child: Row(
                   children: [
-                    _Example(
+                    _ExampleContainer(
                       child: Column(
                         mainAxisAlignment: mainAxisAlignment,
                         mainAxisSize: mainAxisSize,
@@ -66,7 +66,7 @@ class ElevatedFlexExample extends StatelessWidget {
                         ],
                       ),
                     ),
-                    _Example(
+                    _ExampleContainer(
                       child: ElevatedColumn(
                         mainAxisAlignment: mainAxisAlignment,
                         mainAxisSize: mainAxisSize,
@@ -90,9 +90,8 @@ class ElevatedFlexExample extends StatelessWidget {
   }
 }
 
-// todo rename _ExampleContainer
-class _Example extends StatelessWidget {
-  const _Example({required this.child});
+class _ExampleContainer extends StatelessWidget {
+  const _ExampleContainer({required this.child});
 
   final Widget child;
 
