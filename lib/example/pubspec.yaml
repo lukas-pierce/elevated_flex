@@ -14,8 +14,6 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.6
-  flutter_bloc: ^8.1.5
-  bloc: ^8.1.4
   gap: ^3.0.1
 
 dev_dependencies:
