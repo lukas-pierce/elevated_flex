@@ -14,7 +14,12 @@ final class FlexSettingsState {
     this.verticalDirection = VerticalDirection.down,
   });
 
-  FlexSettingsState copyWith() {
+  FlexSettingsState copyWith({
+    MainAxisAlignment? mainAxisAlignment,
+    MainAxisSize? mainAxisSize,
+    CrossAxisAlignment? crossAxisAlignment,
+    VerticalDirection? verticalDirection,
+  }) {
     return FlexSettingsState(
       mainAxisAlignment: MainAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
