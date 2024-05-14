@@ -67,7 +67,8 @@ class ElevatedColumn extends StatelessWidget {
     }).toList();
 
     return CustomBoxy(
-      delegate: _ElevatedColumnDelegate(
+      delegate: _ElevatedFlexDelegate(
+        direction: direction,
         mainAxisAlignment: mainAxisAlignment,
         mainAxisSize: mainAxisSize,
         crossAxisAlignment: crossAxisAlignment,
