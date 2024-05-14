@@ -20,7 +20,7 @@ class _ElevatedColumnDelegate extends BoxyDelegate {
 
   @override
   Size layout() {
-    // remember chidren count
+    // remember children count
     childrenCount = children.length;
 
     // layout children with order according elevation
