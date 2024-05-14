@@ -58,4 +58,8 @@ class _SettingsState extends State<Settings> {
   void _setMainAxisSize(MainAxisSize val) {
     setState(() => state = state.copyWith(mainAxisSize: val));
   }
+
+  void _setCrossAxisAlignment(CrossAxisAlignment val) {
+    setState(() => state = state.copyWith(crossAxisAlignment: val));
+  }
 }
