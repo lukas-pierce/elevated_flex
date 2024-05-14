@@ -39,11 +39,11 @@ final class FlexSettingsState {
 
   @override
   int get hashCode => Object.hash(
-    mainAxisAlignment,
-    mainAxisSize,
-    crossAxisAlignment,
-    verticalDirection,
-  );
+        mainAxisAlignment,
+        mainAxisSize,
+        crossAxisAlignment,
+        verticalDirection,
+      );
 }
 
 class FlexSettings extends InheritedWidget {
