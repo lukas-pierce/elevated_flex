@@ -40,6 +40,8 @@ class ExampleSettings extends StatelessWidget {
               builder: (context, state) {
                 return Column(
                   children: [
+
+                    // mainAxisAlignment
                     _SettingItem<MainAxisAlignment>(
                       values: MainAxisAlignment.values,
                       selected: state.mainAxisAlignment,
@@ -47,6 +49,8 @@ class ExampleSettings extends StatelessWidget {
                         context.read<FlexSettingsCubit>().mainAxisAlignment = val;
                       },
                     ),
+
+                    // mainAxisSize
                     const Gap(20),
                     _SettingItem<MainAxisSize>(
                       values: MainAxisSize.values,
@@ -55,6 +59,8 @@ class ExampleSettings extends StatelessWidget {
                         context.read<FlexSettingsCubit>().mainAxisSize = val;
                       },
                     ),
+
+                    // crossAxisAlignment
                     const Gap(20),
                     _SettingItem<CrossAxisAlignment>(
                       values: CrossAxisAlignment.values,
