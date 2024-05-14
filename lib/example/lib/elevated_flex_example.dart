@@ -85,8 +85,16 @@ class _RowsExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        Text('row1'),
-        Text('row2'),
+        Expanded(
+          child: _ExampleContainer(
+            child: Text('row1'),
+          ),
+        ),
+        Expanded(
+          child: _ExampleContainer(
+            child: Text('row2'),
+          ),
+        ),
       ],
     );
   }
@@ -100,7 +108,7 @@ class _ExampleContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // decoration: BoxDecoration(border: Border.all(color: Colors.red)),
+      decoration: BoxDecoration(border: Border.all(color: Colors.red)),
       padding: const EdgeInsets.all(20),
       child: Align(
         alignment: Alignment.topCenter,
