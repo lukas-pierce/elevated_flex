@@ -113,7 +113,10 @@ class _ElevatedFlexDelegate extends BoxyDelegate {
 
         final double y = nextChildY;
         final double x = switch (effectiveCrossAxisAlignment) {
-          CrossAxisAlignment.start || CrossAxisAlignment.stretch || CrossAxisAlignment.baseline => 0,
+          CrossAxisAlignment.start ||
+          CrossAxisAlignment.stretch ||
+          CrossAxisAlignment.baseline =>
+            0,
           CrossAxisAlignment.end => width - child.size.width,
           CrossAxisAlignment.center => (width - child.size.width) / 2,
         };
@@ -135,7 +138,10 @@ class _ElevatedFlexDelegate extends BoxyDelegate {
 
         final double x = nextChildX;
         final double y = switch (effectiveCrossAxisAlignment) {
-          CrossAxisAlignment.start || CrossAxisAlignment.stretch || CrossAxisAlignment.baseline => 0,
+          CrossAxisAlignment.start ||
+          CrossAxisAlignment.stretch ||
+          CrossAxisAlignment.baseline =>
+            0,
           CrossAxisAlignment.end => height - child.size.height,
           CrossAxisAlignment.center => (height - child.size.height) / 2,
         };
