@@ -20,13 +20,15 @@ class SettingsPanel extends StatelessWidget {
                   if (states.contains(MaterialState.disabled)) {
                     return Colors.white.withOpacity(0.5);
                   }
-                  return states.contains(MaterialState.selected) ? Colors.blue : Colors.white;
+                  final isSelected = states.contains(MaterialState.selected);
+                  return isSelected ? Colors.blue : Colors.white;
                 }),
                 foregroundColor: MaterialStateProperty.resolveWith((states) {
                   if (states.contains(MaterialState.disabled)) {
                     return Colors.grey;
                   }
-                  return states.contains(MaterialState.selected) ? Colors.white : Colors.black;
+                  final isSelected = states.contains(MaterialState.selected);
+                  return isSelected ? Colors.white : Colors.black;
                 }),
                 shape: const MaterialStatePropertyAll(RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(0)),
