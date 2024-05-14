@@ -24,7 +24,7 @@ class ElevatedFlexExample extends StatelessWidget {
                 padding: const MaterialStatePropertyAll(EdgeInsets.symmetric(vertical: 3, horizontal: 5)),
                 textStyle: const MaterialStatePropertyAll(TextStyle(fontSize: 12, fontWeight: FontWeight.normal)),
                 tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                minimumSize: MaterialStatePropertyAll(Size(20, 20)),
+                minimumSize: const MaterialStatePropertyAll(Size(20, 20)),
               ),
             ),
             segmentedButtonTheme: SegmentedButtonThemeData(
