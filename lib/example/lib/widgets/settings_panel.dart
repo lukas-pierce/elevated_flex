@@ -17,11 +17,15 @@ class SettingsPanel extends StatelessWidget {
             elevatedButtonTheme: ElevatedButtonThemeData(
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.resolveWith((states) {
-                  if (states.contains(MaterialState.disabled)) return Colors.white.withOpacity(0.5);
+                  if (states.contains(MaterialState.disabled)) {
+                    return Colors.white.withOpacity(0.5);
+                  }
                   return states.contains(MaterialState.selected) ? Colors.blue : Colors.white;
                 }),
                 foregroundColor: MaterialStateProperty.resolveWith((states) {
-                  if (states.contains(MaterialState.disabled)) return Colors.grey;
+                  if (states.contains(MaterialState.disabled)) {
+                    return Colors.grey;
+                  }
                   return states.contains(MaterialState.selected) ? Colors.white : Colors.black;
                 }),
                 shape: const MaterialStatePropertyAll(RoundedRectangleBorder(
