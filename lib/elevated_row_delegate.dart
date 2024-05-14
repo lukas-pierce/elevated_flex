@@ -121,6 +121,10 @@ class _ElevatedRowDelegate extends _ElevatedFlexDelegate {
   }
 
   void calcHeight() {
-    height = (mainAxisSize == MainAxisSize.max) ? constraints.maxHeight : sumChildrenHeight;
+    if (direction == Axis.vertical) {
+      height = (mainAxisSize == MainAxisSize.max) ? constraints.maxHeight : sumChildrenHeight;
+    } else {
+      height = maxChildrenHeight;
+    }
   }
 }
