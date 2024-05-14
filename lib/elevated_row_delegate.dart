@@ -50,36 +50,36 @@ class _ElevatedRowDelegate extends BoxyDelegate {
     return mainAxisAlignment;
   }
 
-  ({double startY, double stepShift}) calcStartXAndShift() {
+  ({double startX, double stepShift}) calcStartXAndShift() {
     switch (mainAxisSize) {
       case MainAxisSize.min:
-        return (startY: 0, stepShift: 0);
+        return (startX: 0, stepShift: 0);
 
       case MainAxisSize.max:
         double freeSpaceHeight = constraints.maxHeight - sumChildrenHeight;
 
         return switch (effectiveMainAxisAlignment) {
-          MainAxisAlignment.start => (startY: 0, stepShift: 0),
+          MainAxisAlignment.start => (startX: 0, stepShift: 0),
 
           // readability
-          MainAxisAlignment.end => (startY: freeSpaceHeight, stepShift: 0),
+          MainAxisAlignment.end => (startX: freeSpaceHeight, stepShift: 0),
 
           // readability
-          MainAxisAlignment.center => (startY: freeSpaceHeight / 2, stepShift: 0),
+          MainAxisAlignment.center => (startX: freeSpaceHeight / 2, stepShift: 0),
 
           // readability
-          MainAxisAlignment.spaceBetween => (startY: 0, stepShift: freeSpaceHeight / (childrenCount - 1)),
+          MainAxisAlignment.spaceBetween => (startX: 0, stepShift: freeSpaceHeight / (childrenCount - 1)),
 
           // readability
           MainAxisAlignment.spaceAround => () {
               final spaceForChild = freeSpaceHeight / (childrenCount * 2);
-              return (startY: spaceForChild, stepShift: spaceForChild * 2);
+              return (startX: spaceForChild, stepShift: spaceForChild * 2);
             }(),
 
           // readability
           MainAxisAlignment.spaceEvenly => () {
               final spaceForChild = freeSpaceHeight / (childrenCount + 1);
-              return (startY: spaceForChild, stepShift: spaceForChild);
+              return (startX: spaceForChild, stepShift: spaceForChild);
             }(),
         };
     }
