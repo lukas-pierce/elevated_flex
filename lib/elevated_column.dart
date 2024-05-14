@@ -4,7 +4,18 @@ part of 'elevated_flex.dart';
 /// children can be elevated relative to other children.
 /// In CSS terms this is the same as `z-index: 1`
 ///
-/// To elevate then child, wrap it by [Elevated]
+/// To elevate then child, wrap it by [Elevated] like this:
+///
+/// ElevatedColumn(
+///   children: [
+///     Elevated(child1),
+///     child2,
+///     child3,
+///     Elevated(child4),
+///     child5,
+///     child6,
+///   ]
+/// )
 class ElevatedColumn extends StatelessWidget {
   const ElevatedColumn({
     super.key,
