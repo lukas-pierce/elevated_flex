@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:elevated_flex/elevated_flex.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'bloc/flex_settings_cubit.dart';
 import 'widgets/example_settings.dart';
 import 'widgets/example_items.dart';
 
@@ -9,23 +11,26 @@ class ElevatedFlexExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Column(
-        children: [
-          ExampleSettings(),
-          Expanded(
-            child: SafeArea(
-              top: false,
-              child: Column(
-                children: [
-                  Expanded(child: _ColumnsExample()),
-                  Divider(height: 0),
-                  Expanded(child: _RowsExample()),
-                ],
+    return Scaffold(
+      body: BlocProvider(
+        create: (context) => FlexSettingsCubit(),
+        child: Column(
+          children: [
+            ExampleSettings(),
+            Expanded(
+              child: SafeArea(
+                top: false,
+                child: Column(
+                  children: [
+                    Expanded(child: _ColumnsExample()),
+                    Divider(height: 0),
+                    Expanded(child: _RowsExample()),
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
