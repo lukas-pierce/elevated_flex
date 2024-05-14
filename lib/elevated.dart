@@ -1,4 +1,4 @@
-part of elevated_flex;
+part of 'elevated_flex.dart';
 
 class Elevated extends StatelessWidget {
   const Elevated({super.key, required this.child});
