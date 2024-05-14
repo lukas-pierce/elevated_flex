@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:elevated_flex/elevated_flex.dart';
 
 import 'widgets/example_settings.dart';
+import 'widgets/example_items.dart';
 
 class ElevatedFlexExample extends StatelessWidget {
   const ElevatedFlexExample({super.key});
@@ -51,9 +52,9 @@ class _ColumnsExample extends StatelessWidget {
               crossAxisAlignment: crossAxisAlignment,
               verticalDirection: verticalDirection,
               children: [
-                Elevated(child: _Item1()),
-                _ItemCenter(),
-                Elevated(child: _Item2()),
+                Elevated(child: Item1()),
+                ItemCenter(),
+                Elevated(child: Item2()),
               ],
             ),
           ),
@@ -67,9 +68,9 @@ class _ColumnsExample extends StatelessWidget {
               crossAxisAlignment: crossAxisAlignment,
               verticalDirection: verticalDirection,
               children: [
-                Elevated(child: _Item1()),
-                _ItemCenter(),
-                Elevated(child: _Item2()),
+                Elevated(child: Item1()),
+                ItemCenter(),
+                Elevated(child: Item2()),
               ],
             ),
           ),
@@ -100,9 +101,9 @@ class _RowsExample extends StatelessWidget {
               crossAxisAlignment: crossAxisAlignment,
               verticalDirection: verticalDirection,
               children: [
-                Elevated(child: _Item1()),
-                _ItemCenter(),
-                Elevated(child: _Item2()),
+                Elevated(child: Item1()),
+                ItemCenter(),
+                Elevated(child: Item2()),
               ],
             ),
           ),
@@ -116,9 +117,9 @@ class _RowsExample extends StatelessWidget {
               crossAxisAlignment: crossAxisAlignment,
               verticalDirection: verticalDirection,
               children: [
-                Elevated(child: _Item1()),
-                _ItemCenter(),
-                Elevated(child: _Item2()),
+                Elevated(child: Item1()),
+                ItemCenter(),
+                Elevated(child: Item2()),
               ],
             ),
           ),
