@@ -60,8 +60,7 @@ class _SettingItem<T extends Enum> extends StatelessWidget {
         Text('$T'),
         const SizedBox(height: 5),
         Wrap(
-          // mainAxisAlignment: MainAxisAlignment.center,
-          runAlignment: WrapAlignment.center,
+          // alignment: WrapAlignment.center,
           children: [
             ...values.map((value) {
               return ElevatedButton(
