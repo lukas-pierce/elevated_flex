@@ -41,19 +41,19 @@ class ExampleSettings extends StatelessWidget {
                 return Column(
                   children: [
 
-                    // mainAxisAlignment
-                    _SettingItem<MainAxisAlignment>(
-                      values: MainAxisAlignment.values,
-                      selected: state.mainAxisAlignment,
-                      onChanged: (val) => context.read<FlexSettingsCubit>().mainAxisAlignment = val,
-                    ),
-
                     // mainAxisSize
-                    const Gap(10),
                     _SettingItem<MainAxisSize>(
                       values: MainAxisSize.values,
                       selected: state.mainAxisSize,
                       onChanged: (val) => context.read<FlexSettingsCubit>().mainAxisSize = val,
+                    ),
+
+                    // mainAxisAlignment
+                    const Gap(10),
+                    _SettingItem<MainAxisAlignment>(
+                      values: MainAxisAlignment.values,
+                      selected: state.mainAxisAlignment,
+                      onChanged: (val) => context.read<FlexSettingsCubit>().mainAxisAlignment = val,
                     ),
 
                     // crossAxisAlignment
