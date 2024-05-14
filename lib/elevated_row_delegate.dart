@@ -111,9 +111,7 @@ class _ElevatedRowDelegate extends _ElevatedFlexDelegate {
   }
 
   void calcWidth() {
-    final childrenWidths = children.map((child) => child.size.width);
-    final maxWidth = childrenWidths.max;
-    width = maxWidth;
+    width = maxChildrenWidth;
   }
 
   void calcHeight() {
