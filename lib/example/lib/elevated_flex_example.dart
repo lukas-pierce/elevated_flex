@@ -46,42 +46,44 @@ class _ColumnsExample extends StatelessWidget {
     const CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center;
     const VerticalDirection verticalDirection = VerticalDirection.down;
 
-    return const Row(
-      children: [
-        Expanded(
-          child: _ExampleContainer(
-            alignment: Alignment.topCenter,
-            child: Column(
-              mainAxisAlignment: mainAxisAlignment,
-              mainAxisSize: mainAxisSize,
-              crossAxisAlignment: crossAxisAlignment,
-              verticalDirection: verticalDirection,
-              children: [
-                Elevated(child: Item1()),
-                ItemCenter(),
-                Elevated(child: Item2()),
-              ],
+    return BlocBuilder<FlexSettingsCubit, FlexSettingsState>(builder: (context, state) {
+      return const Row(
+        children: [
+          Expanded(
+            child: _ExampleContainer(
+              alignment: Alignment.topCenter,
+              child: Column(
+                mainAxisAlignment: mainAxisAlignment,
+                mainAxisSize: mainAxisSize,
+                crossAxisAlignment: crossAxisAlignment,
+                verticalDirection: verticalDirection,
+                children: [
+                  Elevated(child: Item1()),
+                  ItemCenter(),
+                  Elevated(child: Item2()),
+                ],
+              ),
             ),
           ),
-        ),
-        Expanded(
-          child: _ExampleContainer(
-            alignment: Alignment.topCenter,
-            child: ElevatedColumn(
-              mainAxisAlignment: mainAxisAlignment,
-              mainAxisSize: mainAxisSize,
-              crossAxisAlignment: crossAxisAlignment,
-              verticalDirection: verticalDirection,
-              children: [
-                Elevated(child: Item1()),
-                ItemCenter(),
-                Elevated(child: Item2()),
-              ],
+          Expanded(
+            child: _ExampleContainer(
+              alignment: Alignment.topCenter,
+              child: ElevatedColumn(
+                mainAxisAlignment: mainAxisAlignment,
+                mainAxisSize: mainAxisSize,
+                crossAxisAlignment: crossAxisAlignment,
+                verticalDirection: verticalDirection,
+                children: [
+                  Elevated(child: Item1()),
+                  ItemCenter(),
+                  Elevated(child: Item2()),
+                ],
+              ),
             ),
           ),
-        ),
-      ],
-    );
+        ],
+      );
+    });
   }
 }
 
