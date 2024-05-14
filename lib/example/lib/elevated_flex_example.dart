@@ -82,7 +82,7 @@ class _RowsExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start;
-    const MainAxisSize mainAxisSize = MainAxisSize.min;
+    const MainAxisSize mainAxisSize = MainAxisSize.max;
     const CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center;
     const VerticalDirection verticalDirection = VerticalDirection.down;
 
@@ -137,7 +137,7 @@ class _ExampleContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(border: Border.all(color: Colors.red)),
+      // decoration: BoxDecoration(border: Border.all(color: Colors.red)),
       padding: const EdgeInsets.all(20),
       child: Align(
         alignment: alignment,
