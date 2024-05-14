@@ -10,6 +10,7 @@ environment:
   sdk: '>=3.3.4 <4.0.0'
 
 dependencies:
+  elevated_flex: any
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.6
@@ -21,3 +22,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+dependency_overrides:
+  boxy:
+    path: ../../
