@@ -96,7 +96,8 @@ class _RowsExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<FlexSettingsCubit, FlexSettingsState>(builder: (context, state) {
+    return BlocBuilder<FlexSettingsCubit, FlexSettingsState>(builder: (context, stateOld) {
+      final state = FlexSettings.of(context).state;
       return Column(
         children: [
           Expanded(
