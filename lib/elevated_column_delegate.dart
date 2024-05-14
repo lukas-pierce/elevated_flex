@@ -1,6 +1,6 @@
 part of 'elevated_flex.dart';
 
-class _ElevatedColumnDelegate extends BoxyDelegate {
+class _ElevatedColumnDelegate extends _ElevatedFlexDelegate {
   _ElevatedColumnDelegate({
     required this.mainAxisAlignment,
     required this.mainAxisSize,
@@ -124,7 +124,4 @@ class _ElevatedColumnDelegate extends BoxyDelegate {
     }
   }
 
-  double get sumChildrenHeight {
-    return children.fold(0.0, (sum, child) => sum + child.size.height);
-  }
 }
