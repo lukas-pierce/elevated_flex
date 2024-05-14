@@ -22,7 +22,7 @@ class ElevatedFlexExample extends StatelessWidget {
                   borderRadius: BorderRadius.all(Radius.circular(10)),
                 )),
                 padding: const MaterialStatePropertyAll(EdgeInsets.symmetric(vertical: 2, horizontal: 2)),
-                textStyle: const MaterialStatePropertyAll(TextStyle(fontSize: 12, fontWeight: FontWeight.normal))
+                textStyle: const MaterialStatePropertyAll(TextStyle(fontSize: 12, fontWeight: FontWeight.normal)),
               ),
             ),
           ),
@@ -39,6 +39,22 @@ class ElevatedFlexExample extends StatelessWidget {
                   ButtonSegment(value: 4, label: Text('spaceBetween')),
                   ButtonSegment(value: 5, label: Text('spaceAround')),
                   ButtonSegment(value: 6, label: Text('spaceEvenly')),
+                ],
+              ),
+              Row(
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      //
+                    },
+                    child: const Text('start'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      //
+                    },
+                    child: const Text('end'),
+                  ),
                 ],
               ),
               const SizedBox(height: 20),
