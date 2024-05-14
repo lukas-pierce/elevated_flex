@@ -131,12 +131,14 @@ class _RowsExample extends StatelessWidget {
 
 class _ExampleContainer extends StatelessWidget {
   const _ExampleContainer({
-    required this.child,
+    this.title,
     this.alignment = Alignment.center,
+    required this.child,
   });
 
-  final Widget child;
+  final String? title;
   final AlignmentGeometry alignment;
+  final Widget child;
 
   @override
   Widget build(BuildContext context) {
