@@ -26,6 +26,11 @@ abstract class _ElevatedFlexDelegate extends BoxyDelegate {
         oldDelegate.verticalDirection != verticalDirection;
   }
 
+  // inner calculation
+  late final int childrenCount;
+  late final double width;
+  late final double height;
+
   double get sumChildrenWidth {
     return children.fold(0.0, (sum, child) => sum + child.size.width);
   }
