@@ -33,8 +33,13 @@ class SettingsPanel extends StatelessWidget {
                 shape: const MaterialStatePropertyAll(RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(0)),
                 )),
-                padding: const MaterialStatePropertyAll(EdgeInsets.symmetric(vertical: 3, horizontal: 5)),
-                textStyle: const MaterialStatePropertyAll(TextStyle(fontSize: 12, fontWeight: FontWeight.normal)),
+                padding: const MaterialStatePropertyAll(EdgeInsets.symmetric(
+                  vertical: 3,
+                  horizontal: 5,
+                )),
+                textStyle: const MaterialStatePropertyAll(
+                  TextStyle(fontSize: 12, fontWeight: FontWeight.normal),
+                ),
                 tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                 minimumSize: const MaterialStatePropertyAll(Size(20, 20)),
               ),
