@@ -85,7 +85,7 @@ abstract class _ElevatedFlexDelegate extends BoxyDelegate {
         final child = getChild(i);
 
         final double y = nextChildY;
-        final double x = switch (crossAxisAlignment) {
+        final double x = switch (effectiveCrossAxisAlignment) {
           CrossAxisAlignment.start || CrossAxisAlignment.stretch || CrossAxisAlignment.baseline => 0,
           CrossAxisAlignment.end => width - child.size.width,
           CrossAxisAlignment.center => (width - child.size.width) / 2,
@@ -107,7 +107,7 @@ abstract class _ElevatedFlexDelegate extends BoxyDelegate {
         final child = getChild(i);
 
         final double x = nextChildX;
-        final double y = switch (crossAxisAlignment) {
+        final double y = switch (effectiveCrossAxisAlignment) {
           CrossAxisAlignment.start || CrossAxisAlignment.stretch || CrossAxisAlignment.baseline => 0,
           CrossAxisAlignment.end => height - child.size.height,
           CrossAxisAlignment.center => (height - child.size.height) / 2,
@@ -129,6 +129,15 @@ abstract class _ElevatedFlexDelegate extends BoxyDelegate {
     }
 
     return mainAxisAlignment;
+  }
+
+  CrossAxisAlignment get effectiveCrossAxisAlignment {
+    // reverse crossAxisAlignment for up vertical direction
+    if (direction == Axis.horizontal && verticalDirection == VerticalDirection.up) {
+      if (crossAxisAlignment == CrossAxisAlignment.start) return CrossAxisAlignment.end;
+      if (crossAxisAlignment == CrossAxisAlignment.end) return CrossAxisAlignment.start;
+    }
+    return crossAxisAlignment;
   }
 
   ({double startY, double stepShift}) calcStartYAndShift() {
