@@ -8,7 +8,10 @@ sealed class FlexSettingsState {
   final VerticalDirection verticalDirection = VerticalDirection.down;
 
   const FlexSettingsState({
-    required this.mainAxisAlignment
+    this.mainAxisAlignment = MainAxisAlignment.start,
+    this.mainAxisSize = MainAxisSize.min,
+    this.crossAxisAlignment = CrossAxisAlignment.center,
+    this.verticalDirection = VerticalDirection.down,
   });
 }
 
