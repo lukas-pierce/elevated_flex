@@ -8,29 +8,26 @@ class ElevatedFlexExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: DefaultTextStyle.merge(
-          style: const TextStyle(fontSize: 10),
-          textAlign: TextAlign.center,
-          child: Padding(
-            padding: EdgeInsets.all(0),
-            child: Column(
-              children: [
-                Text('mainAxisAlignment'),
-                SegmentedButton(
-                  selected: {1},
-                  segments: [
-                    ButtonSegment(
-                      value: 1,
-                      label: Text('dssd'),
-                    ),
-                  ],
-                ),
-                Divider(height: 0),
-                Expanded(child: _ColumnsExample()),
-                Divider(height: 0),
-                Expanded(child: _RowsExample()),
-              ],
-            ),
+        child: Padding(
+          padding: EdgeInsets.all(0),
+          child: Column(
+            children: [
+              Text('mainAxisAlignment'),
+              SegmentedButton(
+                selected: {1},
+                segments: [
+                  ButtonSegment(
+                    value: 1,
+                    label: Text('dssd'),
+                  ),
+                ],
+              ),
+              Divider(height: 0),
+              Expanded(child: _ColumnsExample()),
+              Divider(height: 0),
+              Expanded(child: _RowsExample()),
+              // Spacer(),
+            ],
           ),
         ),
       ),
