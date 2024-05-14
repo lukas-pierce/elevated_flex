@@ -66,7 +66,7 @@ class ElevatedRow extends StatelessWidget {
     }).toList();
 
     return CustomBoxy(
-      delegate: _ElevatedColumnDelegate(
+      delegate: _ElevatedRowDelegate(
         mainAxisAlignment: mainAxisAlignment,
         mainAxisSize: mainAxisSize,
         crossAxisAlignment: crossAxisAlignment,
