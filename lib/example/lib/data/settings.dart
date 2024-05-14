@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:lives/model/product.dart';
 
 class InheritedProduct extends InheritedWidget {
   const InheritedProduct({
     super.key,
-    required this.product,
     required super.child,
   });
-
-  final Product product;
 
   static InheritedProduct? maybeOf(BuildContext context) {
     return context.dependOnInheritedWidgetOfExactType<InheritedProduct>();
