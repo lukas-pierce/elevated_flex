@@ -14,7 +14,7 @@ class ElevatedFlexExample extends StatelessWidget {
     return Scaffold(
       body: BlocProvider(
         create: (context) => FlexSettingsCubit(),
-        child: Column(
+        child: const Column(
           children: [
             ExampleSettings(),
             Expanded(
