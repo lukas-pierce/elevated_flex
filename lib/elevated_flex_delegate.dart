@@ -1,6 +1,6 @@
 part of 'elevated_flex.dart';
 
-abstract class _ElevatedFlexDelegate extends BoxyDelegate {
+class _ElevatedFlexDelegate extends BoxyDelegate {
   final Axis direction;
   final MainAxisAlignment mainAxisAlignment;
   final MainAxisSize mainAxisSize;
