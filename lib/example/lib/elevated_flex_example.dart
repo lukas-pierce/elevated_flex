@@ -156,7 +156,9 @@ class _ExampleContainer extends StatelessWidget {
             clipBehavior: Clip.none,
             children: [
               Container(
-                decoration: BoxDecoration(border: Border.all(color: Colors.grey, width: 1)),
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.grey, width: 1),
+                ),
                 child: child,
               ),
               if (title != null)
