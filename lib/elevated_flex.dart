@@ -5,6 +5,7 @@ import 'package:boxy/boxy.dart';
 import 'package:collection/collection.dart';
 
 part 'elevated.dart';
+part 'elevated_flex_base.dart';
 part 'elevated_flex_delegate.dart';
 part 'elevated_column.dart';
 part 'elevated_column_delegate.dart';
