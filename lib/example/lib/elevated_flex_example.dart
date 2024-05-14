@@ -42,22 +42,16 @@ class _ColumnsExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<FlexSettingsCubit, FlexSettingsState>(builder: (context, state) {
-
-      final mainAxisAlignment = state.mainAxisAlignment;
-      final mainAxisSize = state.mainAxisSize;
-      final crossAxisAlignment = state.crossAxisAlignment;
-      final verticalDirection = state.verticalDirection;
-
       return Row(
         children: [
           Expanded(
             child: _ExampleContainer(
               alignment: Alignment.topCenter,
               child: Column(
-                mainAxisAlignment: mainAxisAlignment,
-                mainAxisSize: mainAxisSize,
-                crossAxisAlignment: crossAxisAlignment,
-                verticalDirection: verticalDirection,
+                mainAxisAlignment: state.mainAxisAlignment,
+                mainAxisSize: state.mainAxisSize,
+                crossAxisAlignment: state.crossAxisAlignment,
+                verticalDirection: state.verticalDirection,
                 children: const [
                   Elevated(child: Item1()),
                   ItemCenter(),
@@ -70,11 +64,11 @@ class _ColumnsExample extends StatelessWidget {
             child: _ExampleContainer(
               alignment: Alignment.topCenter,
               child: ElevatedColumn(
-                mainAxisAlignment: mainAxisAlignment,
-                mainAxisSize: mainAxisSize,
-                crossAxisAlignment: crossAxisAlignment,
-                verticalDirection: verticalDirection,
-                children: [
+                mainAxisAlignment: state.mainAxisAlignment,
+                mainAxisSize: state.mainAxisSize,
+                crossAxisAlignment: state.crossAxisAlignment,
+                verticalDirection: state.verticalDirection,
+                children: const [
                   Elevated(child: Item1()),
                   ItemCenter(),
                   Elevated(child: Item2()),
