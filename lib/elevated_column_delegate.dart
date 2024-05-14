@@ -2,18 +2,13 @@ part of 'elevated_flex.dart';
 
 class _ElevatedColumnDelegate extends _ElevatedFlexDelegate {
   _ElevatedColumnDelegate({
-    required this.mainAxisAlignment,
-    required this.mainAxisSize,
-    required this.crossAxisAlignment,
-    required this.verticalDirection,
+    required super.mainAxisAlignment,
+    required super.mainAxisSize,
+    required super.crossAxisAlignment,
+    required super.verticalDirection,
   }) : super(
           direction: Axis.vertical,
         );
-
-  final MainAxisAlignment mainAxisAlignment;
-  final MainAxisSize mainAxisSize;
-  final CrossAxisAlignment crossAxisAlignment;
-  final VerticalDirection verticalDirection;
 
   // inner calculation
   late final int childrenCount;
