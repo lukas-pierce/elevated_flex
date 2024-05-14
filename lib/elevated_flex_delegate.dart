@@ -68,16 +68,9 @@ class _ElevatedFlexDelegate extends BoxyDelegate {
       final child = getChild(i);
 
       // constrains for child
-      BoxConstraints cConstraints = constraints;
-      if (effectiveCrossAxisAlignment == CrossAxisAlignment.stretch) {
-        if (isVertical) {
-          cConstraints = constraints.copyWith(minWidth: constraints.maxWidth);
-        } else {
-          cConstraints = constraints.copyWith(minHeight: constraints.maxHeight);
-        }
-      }
+      final childConstraints = getChildConstraints();
 
-      child.layout(cConstraints);
+      child.layout(childConstraints);
     }
 
     calcWidth();
@@ -85,6 +78,18 @@ class _ElevatedFlexDelegate extends BoxyDelegate {
     positionChildren();
 
     return Size(width, height);
+  }
+
+  BoxConstraints getChildConstraints() {
+    if (effectiveCrossAxisAlignment == CrossAxisAlignment.stretch) {
+      if (isVertical) {
+        return constraints.copyWith(minWidth: constraints.maxWidth);
+      } else {
+        return constraints.copyWith(minHeight: constraints.maxHeight);
+      }
+    }
+
+    return constraints;
   }
 
   void calcWidth() {
@@ -106,7 +111,6 @@ class _ElevatedFlexDelegate extends BoxyDelegate {
   /// positioning children with order according elevation
   void positionChildren() {
     if (isVertical) {
-
       // for column
       final startAndShift = calcStartYAndShift();
       double nextChildY = startAndShift.startY;
@@ -129,9 +133,7 @@ class _ElevatedFlexDelegate extends BoxyDelegate {
         // calc y offset for next child
         nextChildY += child.size.height + startAndShift.stepShift;
       }
-
     } else {
-
       // for row
       final startAndShift = calcStartXAndShift();
       double nextChildX = startAndShift.startX;
