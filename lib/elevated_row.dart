@@ -6,7 +6,7 @@ part of 'elevated_flex.dart';
 ///
 /// To elevate the child, wrap it by [Elevated] like this:
 ///
-/// ElevatedColumn(
+/// ElevatedRow(
 ///   children: [
 ///     Elevated(child1),
 ///     child2,
@@ -16,8 +16,8 @@ part of 'elevated_flex.dart';
 ///     child6,
 ///   ]
 /// )
-class ElevatedColumn extends StatelessWidget {
-  const ElevatedColumn({
+class ElevatedRow extends StatelessWidget {
+  const ElevatedRow({
     super.key,
     this.mainAxisAlignment = MainAxisAlignment.start,
     this.mainAxisSize = MainAxisSize.max,
