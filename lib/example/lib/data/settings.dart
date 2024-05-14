@@ -24,3 +24,17 @@ class InheritedSettings extends InheritedWidget {
   @override
   bool updateShouldNotify(InheritedSettings oldWidget) => state != oldWidget.state;
 }
+
+class Settings extends StatelessWidget {
+  const Settings({
+    super.key,
+    required this.child,
+  });
+
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return child;
+  }
+}
