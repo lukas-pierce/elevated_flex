@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 
 import '../data/settings.dart';
 
@@ -104,7 +103,7 @@ class _SettingItem<T extends Enum> extends StatelessWidget {
               constraints: const BoxConstraints(minWidth: 140),
               child: Text('$T'),
             ),
-            const Gap(5),
+            const SizedBox(height: 5),
             Flexible(
               child: Wrap(
                 // alignment: WrapAlignment.center,
