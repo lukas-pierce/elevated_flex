@@ -88,7 +88,7 @@ class _ElevatedRowDelegate extends BoxyDelegate {
   void positionChildren() {
     final startAndShift = calcStartXAndShift();
 
-    double nextChildY = startAndShift.startY;
+    double nextChildX = startAndShift.startX;
 
     // positioning children with order according elevation
     for (int i = 0; i < childrenCount; i++) {
@@ -100,13 +100,13 @@ class _ElevatedRowDelegate extends BoxyDelegate {
         CrossAxisAlignment.end => width - child.size.width,
         CrossAxisAlignment.center => (width - child.size.width) / 2,
       };
-      final double y = nextChildY;
+      final double y = nextChildX;
       final offset = Offset(x, y);
 
       child.position(offset);
 
       // calc y offset for next child
-      nextChildY += child.size.height + startAndShift.stepShift;
+      nextChildX += child.size.height + startAndShift.stepShift;
     }
   }
 
