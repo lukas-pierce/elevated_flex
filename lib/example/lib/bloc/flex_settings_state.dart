@@ -1,6 +1,14 @@
 part of 'flex_settings_cubit.dart';
 
 @immutable
-sealed class FlexSettingsState {}
+sealed class FlexSettingsState {
+  final MainAxisAlignment mainAxisAlignment;
+  final MainAxisSize mainAxisSize = MainAxisSize.min;
+  final CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center;
+  final VerticalDirection verticalDirection = VerticalDirection.down;
 
-final class FlexSettingsInitial extends FlexSettingsState {}
+  const FlexSettingsState({
+    required this.mainAxisAlignment
+  });
+}
+
