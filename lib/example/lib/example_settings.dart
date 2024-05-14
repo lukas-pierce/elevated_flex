@@ -7,6 +7,7 @@ class ExampleSettings extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.grey[400],
+      width: double.infinity,
       child: SafeArea(
         bottom: false,
         child: Theme(
@@ -48,7 +49,7 @@ class ExampleSettings extends StatelessWidget {
 class _SettingItem<T extends Enum> extends StatelessWidget {
   const _SettingItem({
     required this.values,
-});
+  });
 
   final List<T> values;
 
@@ -58,9 +59,19 @@ class _SettingItem<T extends Enum> extends StatelessWidget {
       children: [
         Text('$T'),
         const SizedBox(height: 5),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+        Wrap(
+          // mainAxisAlignment: MainAxisAlignment.center,
+          runAlignment: WrapAlignment.center,
           children: [
+            ...values.map((value) {
+              return ElevatedButton(
+                onPressed: () {
+                  //
+                },
+                statesController: MaterialStatesController()..value = {MaterialState.selected},
+                child: const Text('start'),
+              );
+            }),
             ElevatedButton(
               onPressed: () {
                 //
