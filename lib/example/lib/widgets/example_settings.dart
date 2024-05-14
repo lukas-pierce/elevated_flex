@@ -106,6 +106,7 @@ class _SettingItem<T extends Enum> extends StatelessWidget {
           children: [
             Container(
               margin: const EdgeInsets.only(right: 5),
+              constraints: const BoxConstraints(minWidth: 140),
               child: Text('$T'),
             ),
             const Gap(5),
