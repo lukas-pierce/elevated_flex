@@ -117,7 +117,7 @@ class _Item1 extends StatelessWidget {
         color: Colors.cyan,
         boxShadow: [_shadow],
       ),
-      child: const Text('item1 (want top)', style: TextStyle(fontSize: 10), textAlign: TextAlign.center),
+      child: const Text('item1 (want top)'),
     );
   }
 }
@@ -136,7 +136,7 @@ class _Item2 extends StatelessWidget {
         color: Colors.lightGreen,
         boxShadow: [_shadow],
       ),
-      child: const Text('item2 (want top)', style: TextStyle(fontSize: 10), textAlign: TextAlign.center),
+      child: const Text('item2 (want top)'),
     );
   }
 }
