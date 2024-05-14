@@ -83,11 +83,26 @@ class _RowsExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start;
+    const MainAxisSize mainAxisSize = MainAxisSize.max;
+    const CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center;
+    const VerticalDirection verticalDirection = VerticalDirection.down;
+
     return const Column(
       children: [
         Expanded(
           child: _ExampleContainer(
-            child: Text('row1'),
+            child: Row(
+              mainAxisAlignment: mainAxisAlignment,
+              mainAxisSize: mainAxisSize,
+              crossAxisAlignment: crossAxisAlignment,
+              verticalDirection: verticalDirection,
+              children: [
+                Elevated(child: _Item1()),
+                _ItemCenter(),
+                Elevated(child: _Item2()),
+              ],
+            ),
           ),
         ),
         Expanded(
