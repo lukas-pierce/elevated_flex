@@ -14,7 +14,7 @@ class _ElevatedColumnDelegate extends _ElevatedFlexDelegate {
   void positionChildren() {
     final startAndShift = calcStartYAndShift();
 
-    double nextChildY = startAndShift.startY;
+    double nextChildMainCoord = startAndShift.startY;
 
     // positioning children with order according elevation
     for (int i = 0; i < childrenCount; i++) {
@@ -26,13 +26,13 @@ class _ElevatedColumnDelegate extends _ElevatedFlexDelegate {
         CrossAxisAlignment.end => width - child.size.width,
         CrossAxisAlignment.center => (width - child.size.width) / 2,
       };
-      final double y = nextChildY;
+      final double y = nextChildMainCoord;
       final offset = Offset(x, y);
 
       child.position(offset);
 
       // calc y offset for next child
-      nextChildY += child.size.height + startAndShift.stepShift;
+      nextChildMainCoord += child.size.height + startAndShift.stepShift;
     }
   }
 }
