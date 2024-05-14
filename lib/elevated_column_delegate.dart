@@ -50,7 +50,7 @@ class _ElevatedColumnDelegate extends BoxyDelegate {
     return mainAxisAlignment;
   }
 
-  ({double startY, double stepShift}) calcStartAndShift() {
+  ({double startY, double stepShift}) calcStartYAndShift() {
     switch (mainAxisSize) {
       case MainAxisSize.min:
         return (startY: 0, stepShift: 0);
@@ -86,7 +86,7 @@ class _ElevatedColumnDelegate extends BoxyDelegate {
   }
 
   void positionChildren() {
-    final startAndShift = calcStartAndShift();
+    final startAndShift = calcStartYAndShift();
 
     double nextChildY = startAndShift.startY;
 
