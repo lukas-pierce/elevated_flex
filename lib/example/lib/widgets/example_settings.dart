@@ -39,7 +39,13 @@ class ExampleSettings extends StatelessWidget {
               builder: (context, state) {
                 return Column(
                   children: [
-                    _SettingItem<MainAxisAlignment>(values: MainAxisAlignment.values),
+                    _SettingItem<MainAxisAlignment>(
+                      values: MainAxisAlignment.values,
+                      selected: state.mainAxisAlignment,
+                      onChanged: (val) {
+                        context.read<FlexSettingsCubit>().mainAxisAlignment = val;
+                      },
+                    ),
                     // SizedBox(height: 20),
                     // _SettingItem(),
                   ],
