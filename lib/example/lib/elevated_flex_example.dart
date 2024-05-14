@@ -87,47 +87,44 @@ class _RowsExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start;
-    const MainAxisSize mainAxisSize = MainAxisSize.max;
-    const CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center;
-    const VerticalDirection verticalDirection = VerticalDirection.down;
-
-    return const Column(
-      children: [
-        Expanded(
-          child: _ExampleContainer(
-            alignment: Alignment.centerLeft,
-            child: Row(
-              mainAxisAlignment: mainAxisAlignment,
-              mainAxisSize: mainAxisSize,
-              crossAxisAlignment: crossAxisAlignment,
-              verticalDirection: verticalDirection,
-              children: [
-                Elevated(child: Item1()),
-                ItemCenter(),
-                Elevated(child: Item2()),
-              ],
+    return BlocBuilder<FlexSettingsCubit, FlexSettingsState>(builder: (context, state) {
+      return Column(
+        children: [
+          Expanded(
+            child: _ExampleContainer(
+              alignment: Alignment.centerLeft,
+              child: Row(
+                mainAxisAlignment: state.mainAxisAlignment,
+                mainAxisSize: state.mainAxisSize,
+                crossAxisAlignment: state.crossAxisAlignment,
+                verticalDirection: state.verticalDirection,
+                children: const [
+                  Elevated(child: Item1()),
+                  ItemCenter(),
+                  Elevated(child: Item2()),
+                ],
+              ),
             ),
           ),
-        ),
-        Expanded(
-          child: _ExampleContainer(
-            alignment: Alignment.centerLeft,
-            child: ElevatedRow(
-              mainAxisAlignment: mainAxisAlignment,
-              mainAxisSize: mainAxisSize,
-              crossAxisAlignment: crossAxisAlignment,
-              verticalDirection: verticalDirection,
-              children: [
-                Elevated(child: Item1()),
-                ItemCenter(),
-                Elevated(child: Item2()),
-              ],
+          Expanded(
+            child: _ExampleContainer(
+              alignment: Alignment.centerLeft,
+              child: ElevatedRow(
+                mainAxisAlignment: state.mainAxisAlignment,
+                mainAxisSize: state.mainAxisSize,
+                crossAxisAlignment: state.crossAxisAlignment,
+                verticalDirection: state.verticalDirection,
+                children: const [
+                  Elevated(child: Item1()),
+                  ItemCenter(),
+                  Elevated(child: Item2()),
+                ],
+              ),
             ),
           ),
-        ),
-      ],
-    );
+        ],
+      );
+    });
   }
 }
 
