@@ -101,7 +101,7 @@ class _ElevatedRowDelegate extends _ElevatedFlexDelegate {
       final double y = switch (crossAxisAlignment) {
         CrossAxisAlignment.start || CrossAxisAlignment.stretch || CrossAxisAlignment.baseline => 0,
         CrossAxisAlignment.end => height - child.size.height,
-        CrossAxisAlignment.center => (width - child.size.width) / 2,
+        CrossAxisAlignment.center => (height - child.size.height) / 2,
       };
       final offset = Offset(x, y);
 
