@@ -49,7 +49,7 @@ class ExampleSettings extends StatelessWidget {
                     ),
 
                     // mainAxisSize
-                    const Gap(20),
+                    const Gap(10),
                     _SettingItem<MainAxisSize>(
                       values: MainAxisSize.values,
                       selected: state.mainAxisSize,
@@ -57,7 +57,7 @@ class ExampleSettings extends StatelessWidget {
                     ),
 
                     // crossAxisAlignment
-                    const Gap(20),
+                    const Gap(10),
                     _SettingItem<CrossAxisAlignment>(
                       values: CrossAxisAlignment.values,
                       selected: state.crossAxisAlignment,
@@ -65,7 +65,7 @@ class ExampleSettings extends StatelessWidget {
                     ),
 
                     // verticalDirection
-                    const Gap(20),
+                    const Gap(10),
                     _SettingItem<VerticalDirection>(
                       values: VerticalDirection.values,
                       selected: state.verticalDirection,
