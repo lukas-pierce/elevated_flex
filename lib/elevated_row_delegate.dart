@@ -1,6 +1,6 @@
 part of 'elevated_flex.dart';
 
-class _ElevatedRowDelegate extends BoxyDelegate {
+class _ElevatedRowDelegate extends _ElevatedFlexDelegate {
   _ElevatedRowDelegate({
     required this.mainAxisAlignment,
     required this.mainAxisSize,
@@ -122,10 +122,6 @@ class _ElevatedRowDelegate extends BoxyDelegate {
     } else {
       height = sumChildrenHeight;
     }
-  }
-
-  double get sumChildrenHeight {
-    return children.fold(0.0, (sum, child) => sum + child.size.height);
   }
 
   double get sumChildrenWidth {
