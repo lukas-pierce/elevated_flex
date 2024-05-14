@@ -37,16 +37,6 @@ class _ElevatedColumnDelegate extends _ElevatedFlexDelegate {
     return Size(width, height);
   }
 
-  MainAxisAlignment get effectiveMainAxisAlignment {
-    // reverse mainAxisAlignment for up vertical direction
-    if (direction == Axis.vertical && verticalDirection == VerticalDirection.up) {
-      if (mainAxisAlignment == MainAxisAlignment.start) return MainAxisAlignment.end;
-      if (mainAxisAlignment == MainAxisAlignment.end) return MainAxisAlignment.start;
-    }
-
-    return mainAxisAlignment;
-  }
-
   ({double startY, double stepShift}) calcStartYAndShift() {
     switch (mainAxisSize) {
       case MainAxisSize.min:
