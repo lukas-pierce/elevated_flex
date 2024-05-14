@@ -20,7 +20,7 @@ class ElevatedFlexExample extends StatelessWidget {
                 ),
                 Divider(height: 0),
                 Expanded(
-                  child: _ColumnsExample(),
+                  child: _RowsExample(),
                 ),
               ],
             ),
@@ -69,6 +69,20 @@ class _ColumnsExample extends StatelessWidget {
             ],
           ),
         ),
+      ],
+    );
+  }
+}
+
+class _RowsExample extends StatelessWidget {
+  const _RowsExample();
+
+  @override
+  Widget build(BuildContext context) {
+    return const Column(
+      children: [
+        Text('row1'),
+        Text('row2'),
       ],
     );
   }
