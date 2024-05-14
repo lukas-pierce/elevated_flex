@@ -18,10 +18,12 @@ class ElevatedFlex extends StatelessWidget {
   final VerticalDirection verticalDirection;
   final List<Widget> children;
 
+  bool get isVertical => direction == Axis.vertical;
+
   @override
   Widget build(BuildContext context) {
     final List<Widget> children;
-    if (direction == Axis.vertical && verticalDirection == VerticalDirection.up) {
+    if (isVertical && verticalDirection == VerticalDirection.up) {
       children = this.children.reversed.toList();
     } else {
       children = this.children;
