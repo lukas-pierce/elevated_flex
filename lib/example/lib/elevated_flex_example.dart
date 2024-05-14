@@ -89,3 +89,27 @@ class ElevatedFlexExample extends StatelessWidget {
     );
   }
 }
+
+// todo rename _ExampleContainer
+class _Example extends StatelessWidget {
+  const _Example({required this.child});
+
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Container(
+        // decoration: BoxDecoration(border: Border.all()),
+        padding: const EdgeInsets.all(20),
+        child: Align(
+          alignment: Alignment.topCenter,
+          child: Container(
+            decoration: BoxDecoration(border: Border.all(color: Colors.black, width: 1)),
+            child: child,
+          ),
+        ),
+      ),
+    );
+  }
+}
