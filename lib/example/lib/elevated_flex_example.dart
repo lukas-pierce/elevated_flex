@@ -18,6 +18,11 @@ class ElevatedFlexExample extends StatelessWidget {
                 foregroundColor: MaterialStateProperty.resolveWith((states) {
                   return states.contains(MaterialState.selected) ? Colors.white : Colors.black;
                 }),
+                shape: const MaterialStatePropertyAll(RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                )),
+                padding: const MaterialStatePropertyAll(EdgeInsets.symmetric(vertical: 2, horizontal: 2)),
+                textStyle: const MaterialStatePropertyAll(TextStyle(fontSize: 12, fontWeight: FontWeight.normal))
               ),
             ),
           ),
