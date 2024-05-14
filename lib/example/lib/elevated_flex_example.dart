@@ -148,9 +148,19 @@ class _ExampleContainer extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         child: Align(
           alignment: alignment,
-          child: Container(
-            decoration: BoxDecoration(border: Border.all(color: Colors.black, width: 1)),
-            child: child,
+          child: Stack(
+            clipBehavior: Clip.none,
+            children: [
+              Container(
+                decoration: BoxDecoration(border: Border.all(color: Colors.black, width: 1)),
+                child: child,
+              ),
+              const Positioned(
+                // left: 0,
+                top: -16,
+                child: Text('example'),
+              ),
+            ],
           ),
         ),
       ),
