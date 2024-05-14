@@ -5,3 +5,4 @@ import 'package:boxy/boxy.dart';
 
 part 'elevated.dart';
 part 'elevated_column.dart';
+part 'elevated_column_delegate.dart';
