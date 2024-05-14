@@ -124,5 +124,4 @@ class _ElevatedRowDelegate extends _ElevatedFlexDelegate {
     }
   }
 
-
 }
