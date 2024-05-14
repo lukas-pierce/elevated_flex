@@ -3,6 +3,7 @@ part of 'elevated_flex.dart';
 class ElevatedFlex extends StatelessWidget {
   const ElevatedFlex({
     super.key,
+    required this.direction,
     this.mainAxisAlignment = MainAxisAlignment.start,
     this.mainAxisSize = MainAxisSize.max,
     this.crossAxisAlignment = CrossAxisAlignment.center,
@@ -10,6 +11,7 @@ class ElevatedFlex extends StatelessWidget {
     this.children = const <Widget>[],
   });
 
+  final Axis direction;
   final MainAxisAlignment mainAxisAlignment;
   final MainAxisSize mainAxisSize;
   final CrossAxisAlignment crossAxisAlignment;
