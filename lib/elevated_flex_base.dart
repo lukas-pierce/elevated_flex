@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ElevatedRow extends StatelessWidget {
-  const ElevatedRow({
+class ElevatedFlex extends StatelessWidget {
+  const ElevatedFlex({
     super.key,
     this.mainAxisAlignment = MainAxisAlignment.start,
     this.mainAxisSize = MainAxisSize.max,
