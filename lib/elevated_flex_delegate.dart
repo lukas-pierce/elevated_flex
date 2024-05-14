@@ -118,4 +118,20 @@ abstract class _ElevatedFlexDelegate extends BoxyDelegate {
         };
     }
   }
+
+  void calcWidth() {
+    if (direction == Axis.vertical) {
+      width = maxChildrenWidth;
+    } else {
+      width = (mainAxisSize == MainAxisSize.max) ? constraints.maxWidth : sumChildrenWidth;
+    }
+  }
+
+  void calcHeight() {
+    if (direction == Axis.vertical) {
+      height = (mainAxisSize == MainAxisSize.max) ? constraints.maxHeight : sumChildrenHeight;
+    } else {
+      height = maxChildrenHeight;
+    }
+  }
 }

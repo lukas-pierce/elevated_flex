@@ -32,41 +32,6 @@ class _ElevatedColumnDelegate extends _ElevatedFlexDelegate {
     return Size(width, height);
   }
 
-  ({double startY, double stepShift}) calcStartYAndShift() {
-    switch (mainAxisSize) {
-      case MainAxisSize.min:
-        return (startY: 0, stepShift: 0);
-
-      case MainAxisSize.max:
-        double freeSpaceHeight = constraints.maxHeight - sumChildrenHeight;
-
-        return switch (effectiveMainAxisAlignment) {
-          MainAxisAlignment.start => (startY: 0, stepShift: 0),
-
-          // readability
-          MainAxisAlignment.end => (startY: freeSpaceHeight, stepShift: 0),
-
-          // readability
-          MainAxisAlignment.center => (startY: freeSpaceHeight / 2, stepShift: 0),
-
-          // readability
-          MainAxisAlignment.spaceBetween => (startY: 0, stepShift: freeSpaceHeight / (childrenCount - 1)),
-
-          // readability
-          MainAxisAlignment.spaceAround => () {
-              final spaceForChild = freeSpaceHeight / (childrenCount * 2);
-              return (startY: spaceForChild, stepShift: spaceForChild * 2);
-            }(),
-
-          // readability
-          MainAxisAlignment.spaceEvenly => () {
-              final spaceForChild = freeSpaceHeight / (childrenCount + 1);
-              return (startY: spaceForChild, stepShift: spaceForChild);
-            }(),
-        };
-    }
-  }
-
   void positionChildren() {
     final startAndShift = calcStartYAndShift();
 
@@ -90,13 +55,5 @@ class _ElevatedColumnDelegate extends _ElevatedFlexDelegate {
       // calc y offset for next child
       nextChildY += child.size.height + startAndShift.stepShift;
     }
-  }
-
-  void calcWidth() {
-    width = maxChildrenWidth;
-  }
-
-  void calcHeight() {
-    height = (mainAxisSize == MainAxisSize.max) ? constraints.maxHeight : sumChildrenHeight;
   }
 }
