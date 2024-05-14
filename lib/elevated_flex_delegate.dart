@@ -14,4 +14,8 @@ abstract class _ElevatedFlexDelegate extends BoxyDelegate {
     return children.map((child) => child.size.width).max;
   }
 
+  double get maxChildrenHeight {
+    return children.map((child) => child.size.height).max;
+  }
+
 }
