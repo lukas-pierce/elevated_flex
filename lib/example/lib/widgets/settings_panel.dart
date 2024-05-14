@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 
-import '../bloc/flex_settings_cubit.dart';
 import '../data/settings.dart';
 
 class SettingsPanel extends StatelessWidget {
@@ -39,44 +37,40 @@ class SettingsPanel extends StatelessWidget {
           ),
           child: Padding(
             padding: const EdgeInsets.all(10),
-            child: BlocBuilder<FlexSettingsCubit, FlexSettingsState>(
-              builder: (context, state) {
-                return Column(
-                  children: [
-                    // mainAxisSize
-                    _SettingItem<MainAxisSize>(
-                      values: MainAxisSize.values,
-                      selected: FlexSettings.of(context).state.mainAxisSize,
-                      onChanged: (val) => FlexSettings.of(context).setMainAxisSize(val),
-                    ),
+            child: Column(
+              children: [
+                // mainAxisSize
+                _SettingItem<MainAxisSize>(
+                  values: MainAxisSize.values,
+                  selected: FlexSettings.of(context).state.mainAxisSize,
+                  onChanged: (val) => FlexSettings.of(context).setMainAxisSize(val),
+                ),
 
-                    // mainAxisAlignment
-                    const Gap(10),
-                    _SettingItem<MainAxisAlignment>(
-                      values: MainAxisAlignment.values,
-                      selected: FlexSettings.of(context).state.mainAxisAlignment,
-                      onChanged: (val) => FlexSettings.of(context).setMainAxisAlignment(val),
-                    ),
+                // mainAxisAlignment
+                const Gap(10),
+                _SettingItem<MainAxisAlignment>(
+                  values: MainAxisAlignment.values,
+                  selected: FlexSettings.of(context).state.mainAxisAlignment,
+                  onChanged: (val) => FlexSettings.of(context).setMainAxisAlignment(val),
+                ),
 
-                    // crossAxisAlignment
-                    const Gap(10),
-                    _SettingItem<CrossAxisAlignment>(
-                      values: CrossAxisAlignment.values,
-                      disabledValues: const [CrossAxisAlignment.baseline],
-                      selected: FlexSettings.of(context).state.crossAxisAlignment,
-                      onChanged: (val) => FlexSettings.of(context).setCrossAxisAlignment(val),
-                    ),
+                // crossAxisAlignment
+                const Gap(10),
+                _SettingItem<CrossAxisAlignment>(
+                  values: CrossAxisAlignment.values,
+                  disabledValues: const [CrossAxisAlignment.baseline],
+                  selected: FlexSettings.of(context).state.crossAxisAlignment,
+                  onChanged: (val) => FlexSettings.of(context).setCrossAxisAlignment(val),
+                ),
 
-                    // verticalDirection
-                    const Gap(10),
-                    _SettingItem<VerticalDirection>(
-                      values: VerticalDirection.values,
-                      selected: FlexSettings.of(context).state.verticalDirection,
-                      onChanged: (val) => FlexSettings.of(context).setVerticalDirection(val),
-                    ),
-                  ],
-                );
-              },
+                // verticalDirection
+                const Gap(10),
+                _SettingItem<VerticalDirection>(
+                  values: VerticalDirection.values,
+                  selected: FlexSettings.of(context).state.verticalDirection,
+                  onChanged: (val) => FlexSettings.of(context).setVerticalDirection(val),
+                ),
+              ],
             ),
           ),
         ),
