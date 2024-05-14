@@ -9,17 +9,24 @@ class ElevatedFlexExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: [
-            ExampleSettings(),
-            SizedBox(height: 20),
-            Divider(height: 0),
-            Expanded(child: _ColumnsExample()),
-            Divider(height: 0),
-            Expanded(child: _RowsExample()),
-          ],
-        ),
+      body: Column(
+        children: [
+          ExampleSettings(),
+          Expanded(
+            child: SafeArea(
+              top: false,
+              child: Column(
+                children: [
+                  SizedBox(height: 20),
+                  Divider(height: 0),
+                  Expanded(child: _ColumnsExample()),
+                  Divider(height: 0),
+                  Expanded(child: _RowsExample()),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
