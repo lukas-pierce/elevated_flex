@@ -2,11 +2,19 @@ part of 'elevated_flex.dart';
 
 abstract class _ElevatedFlexDelegate extends BoxyDelegate {
   final Axis direction;
+  final MainAxisAlignment mainAxisAlignment;
+  final MainAxisSize mainAxisSize;
+  final CrossAxisAlignment crossAxisAlignment;
+  final VerticalDirection verticalDirection;
 
   _ElevatedFlexDelegate({
     super.relayout,
     super.repaint,
     required this.direction,
+    required this.mainAxisAlignment,
+    required this.mainAxisSize,
+    required this.crossAxisAlignment,
+    required this.verticalDirection,
   });
 
   double get sumChildrenWidth {
