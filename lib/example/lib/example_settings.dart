@@ -49,9 +49,13 @@ class ExampleSettings extends StatelessWidget {
 class _SettingItem<T extends Enum> extends StatelessWidget {
   const _SettingItem({
     required this.values,
+    this.selected,
+    this.onChanged,
   });
 
   final List<T> values;
+  final T? selected;
+  final ValueChanged<T>? onChanged;
 
   @override
   Widget build(BuildContext context) {
