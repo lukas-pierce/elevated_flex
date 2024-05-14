@@ -145,7 +145,7 @@ class _ExampleContainer extends StatelessWidget {
       textAlign: TextAlign.center,
       child: Container(
         // decoration: BoxDecoration(border: Border.all(color: Colors.red)),
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(35),
         child: Align(
           alignment: alignment,
           child: Stack(
@@ -157,8 +157,8 @@ class _ExampleContainer extends StatelessWidget {
               ),
               const Positioned(
                 // left: 0,
-                top: -16,
-                child: Text('example'),
+                top: -27,
+                child: Text('example', style: TextStyle(fontSize: 12, color: Colors.blueAccent)),
               ),
             ],
           ),
