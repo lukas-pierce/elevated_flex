@@ -16,22 +16,17 @@ part of 'elevated_flex.dart';
 ///     child6,
 ///   ]
 /// )
-class ElevatedColumn extends StatelessWidget {
+class ElevatedColumn extends ElevatedFlex {
   const ElevatedColumn({
     super.key,
-    this.mainAxisAlignment = MainAxisAlignment.start,
-    this.mainAxisSize = MainAxisSize.max,
-    this.crossAxisAlignment = CrossAxisAlignment.center,
-    this.verticalDirection = VerticalDirection.down,
-    this.children = const <Widget>[],
-  });
-
-  final Axis direction = Axis.vertical;
-  final MainAxisAlignment mainAxisAlignment;
-  final MainAxisSize mainAxisSize;
-  final CrossAxisAlignment crossAxisAlignment;
-  final VerticalDirection verticalDirection;
-  final List<Widget> children;
+    super.mainAxisAlignment = MainAxisAlignment.start,
+    super.mainAxisSize = MainAxisSize.max,
+    super.crossAxisAlignment = CrossAxisAlignment.center,
+    super.verticalDirection = VerticalDirection.down,
+    super.children = const <Widget>[],
+  }): super(
+    direction: Axis.vertical,
+  );
 
   @override
   Widget build(BuildContext context) {
