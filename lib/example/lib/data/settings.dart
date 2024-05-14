@@ -53,6 +53,9 @@ class _SettingsState extends State<Settings> {
     return InheritedSettings(
       state: state,
       setMainAxisAlignment: _setMainAxisAlignment,
+      setMainAxisSize: _setMainAxisSize,
+      setCrossAxisAlignment: _setCrossAxisAlignment,
+      setVerticalDirection: _setVerticalDirection,
       child: widget.child,
     );
   }
