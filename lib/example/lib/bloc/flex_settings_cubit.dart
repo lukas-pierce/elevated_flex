@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
+import 'package:flutter/material.dart';
 
 part 'flex_settings_state.dart';
 
 class FlexSettingsCubit extends Cubit<FlexSettingsState> {
-  FlexSettingsCubit() : super(FlexSettingsInitial());
+  FlexSettingsCubit() : super(const FlexSettingsState());
 }
