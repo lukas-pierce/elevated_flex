@@ -4,7 +4,7 @@ part of 'elevated_flex.dart';
 /// children can be elevated relative to other children.
 /// In CSS terms this is the same as `z-index: 1`
 ///
-/// To elevate then child, wrap it by [Elevated] like this:
+/// To elevate the child, wrap it by [Elevated] like this:
 ///
 /// ElevatedColumn(
 ///   children: [
