@@ -30,7 +30,11 @@ class _ElevatedRowDelegate extends _ElevatedFlexDelegate {
       final child = getChild(i);
       BoxConstraints childConstraints = constraints;
       if (crossAxisAlignment == CrossAxisAlignment.stretch) {
-        childConstraints = constraints.copyWith(minWidth: constraints.maxWidth);
+        if (direction == Axis.vertical) {
+          childConstraints = constraints.copyWith(minWidth: constraints.maxWidth);
+        } else {
+          childConstraints = constraints.copyWith(minHeight: constraints.maxHeight);
+        }
       }
       child.layout(childConstraints);
     }
