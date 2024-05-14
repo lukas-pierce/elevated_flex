@@ -88,13 +88,13 @@ class _ElevatedFlexDelegate extends BoxyDelegate {
     if (isVertical) {
       width = maxChildrenWidth;
     } else {
-      width = (mainAxisSize == MainAxisSize.max) ? constraints.maxWidth : sumChildrenWidth;
+      width = isMainAxisSizeMax ? constraints.maxWidth : sumChildrenWidth;
     }
   }
 
   void calcHeight() {
     if (isVertical) {
-      height = (mainAxisSize == MainAxisSize.max) ? constraints.maxHeight : sumChildrenHeight;
+      height = isMainAxisSizeMax ? constraints.maxHeight : sumChildrenHeight;
     } else {
       height = maxChildrenHeight;
     }
@@ -221,6 +221,8 @@ class _ElevatedFlexDelegate extends BoxyDelegate {
   bool get isVertical => direction == Axis.vertical;
 
   bool get isHorizontal => direction == Axis.horizontal;
+
+  bool get isMainAxisSizeMax => mainAxisSize == MainAxisSize.max;
 
   double get sumChildrenWidth => children.fold(0.0, (sum, child) => sum + child.size.width);
 
