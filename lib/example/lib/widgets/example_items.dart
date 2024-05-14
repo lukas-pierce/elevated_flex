@@ -7,7 +7,7 @@ const _shadow = BoxShadow(
 );
 
 class Item1 extends StatelessWidget {
-  const Item1();
+  const Item1({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class Item1 extends StatelessWidget {
 }
 
 class Item2 extends StatelessWidget {
-  const Item2();
+  const Item2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class Item2 extends StatelessWidget {
 }
 
 class ItemCenter extends StatelessWidget {
-  const ItemCenter();
+  const ItemCenter({super.key});
 
   @override
   Widget build(BuildContext context) {
