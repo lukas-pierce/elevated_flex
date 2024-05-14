@@ -21,10 +21,10 @@ final class FlexSettingsState {
     VerticalDirection? verticalDirection,
   }) {
     return FlexSettingsState(
-      mainAxisAlignment: MainAxisAlignment.start,
-      mainAxisSize: MainAxisSize.min,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      verticalDirection: VerticalDirection.down,
+      mainAxisAlignment: mainAxisAlignment ?? this.mainAxisAlignment,
+      mainAxisSize: mainAxisSize ?? this.mainAxisSize,
+      crossAxisAlignment: crossAxisAlignment ?? this.crossAxisAlignment,
+      verticalDirection: verticalDirection ?? this.verticalDirection,
     );
   }
 }
