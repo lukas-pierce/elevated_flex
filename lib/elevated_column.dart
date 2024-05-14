@@ -1,8 +1,4 @@
 // import 'package:collection/collection.dart';
-// import 'package:flutter/material.dart';
-// import 'package:boxy/boxy.dart';
-//
-// part 'elevated_column_delegate.dart';
 part of 'elevated_flex.dart';
 
 /// Вижет который строит колонку
