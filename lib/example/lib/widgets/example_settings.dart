@@ -114,14 +114,16 @@ class _SettingItem<T extends Enum> extends StatelessWidget {
               child: Wrap(
                 // alignment: WrapAlignment.center,
                 children: [
-                  ...values.map((value) {
+                  ...values.map<List<Widget>>((value) {
                     final disabled = disabledValues.contains(value);
-                    return ElevatedButton(
-                      onPressed: (!disabled && onChanged != null) ? () => onChanged?.call(value) : null,
-                      statesController: value == selected ? MaterialStatesController({MaterialState.selected}) : null,
-                      child: Text(value.name),
-                    );
-                  }),
+                    return [
+                      ElevatedButton(
+                        onPressed: (!disabled && onChanged != null) ? () => onChanged?.call(value) : null,
+                        statesController: value == selected ? MaterialStatesController({MaterialState.selected}) : null,
+                        child: Text(value.name),
+                      )
+                    ];
+                  }).expand((element) => element),
                 ],
               ),
             ),
