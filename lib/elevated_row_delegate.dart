@@ -21,12 +21,18 @@ class _ElevatedRowDelegate extends _ElevatedFlexDelegate {
       final child = getChild(i);
 
       // for row
-      final double x = nextChildX;
-      final double y = switch (crossAxisAlignment) {
-        CrossAxisAlignment.start || CrossAxisAlignment.stretch || CrossAxisAlignment.baseline => 0,
-        CrossAxisAlignment.end => height - child.size.height,
-        CrossAxisAlignment.center => (height - child.size.height) / 2,
-      };
+      final double x, y;
+      if (direction == Axis.vertical) {
+
+      } else {
+        x = nextChildX;
+        y = switch (crossAxisAlignment) {
+          CrossAxisAlignment.start || CrossAxisAlignment.stretch || CrossAxisAlignment.baseline => 0,
+          CrossAxisAlignment.end => height - child.size.height,
+          CrossAxisAlignment.center => (height - child.size.height) / 2,
+        };
+      }
+
       final offset = Offset(x, y);
 
       child.position(offset);
