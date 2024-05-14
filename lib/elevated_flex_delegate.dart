@@ -163,23 +163,37 @@ class _ElevatedFlexDelegate extends BoxyDelegate {
           MainAxisAlignment.end => (startY: freeSpaceHeight, stepShift: 0),
 
           // readability
-          MainAxisAlignment.center => (startY: freeSpaceHeight / 2, stepShift: 0),
+          MainAxisAlignment.center => () {
+              return (
+                startY: freeSpaceHeight / 2,
+                stepShift: 0.0,
+              );
+            }(),
 
           // readability
           MainAxisAlignment.spaceBetween => () {
-            return (startY: 0.0, stepShift: freeSpaceHeight / (childrenCount - 1));
-          }(),
+              return (
+                startY: 0.0,
+                stepShift: freeSpaceHeight / (childrenCount - 1),
+              );
+            }(),
 
           // readability
           MainAxisAlignment.spaceAround => () {
               final spaceForChild = freeSpaceHeight / (childrenCount * 2);
-              return (startY: spaceForChild, stepShift: spaceForChild * 2);
+              return (
+                startY: spaceForChild,
+                stepShift: spaceForChild * 2,
+              );
             }(),
 
           // readability
           MainAxisAlignment.spaceEvenly => () {
               final spaceForChild = freeSpaceHeight / (childrenCount + 1);
-              return (startY: spaceForChild, stepShift: spaceForChild);
+              return (
+                startY: spaceForChild,
+                stepShift: spaceForChild,
+              );
             }(),
         };
     }
