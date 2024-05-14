@@ -94,7 +94,7 @@ class _ElevatedRowDelegate extends BoxyDelegate {
     for (int i = 0; i < childrenCount; i++) {
       final child = getChild(i);
 
-      // for column
+      // for row
       final double x = switch (crossAxisAlignment) {
         CrossAxisAlignment.start || CrossAxisAlignment.stretch || CrossAxisAlignment.baseline => 0,
         CrossAxisAlignment.end => width - child.size.width,
