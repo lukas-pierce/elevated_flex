@@ -8,12 +8,9 @@ class ElevatedFlexExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            Text('mainAxisAlignment'),
-            SegmentedButton(
-              showSelectedIcon: false,
-              selected: {1},
+        child: Theme(
+          data: ThemeData(
+            segmentedButtonTheme: SegmentedButtonThemeData(
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.resolveWith((states) {
                   return states.contains(MaterialState.selected) ? Colors.blue : Colors.white;
@@ -22,22 +19,31 @@ class ElevatedFlexExample extends StatelessWidget {
                   return states.contains(MaterialState.selected) ? Colors.white : Colors.black;
                 }),
               ),
-              segments: const [
-                ButtonSegment(value: 1, label: Text('start')),
-                ButtonSegment(value: 2, label: Text('end')),
-                ButtonSegment(value: 3, label: Text('center')),
-                ButtonSegment(value: 4, label: Text('spaceBetween')),
-                ButtonSegment(value: 5, label: Text('spaceAround')),
-                ButtonSegment(value: 6, label: Text('spaceEvenly')),
-              ],
             ),
-            SizedBox(height: 20),
-            Divider(height: 0),
-            Expanded(child: _ColumnsExample()),
-            Divider(height: 0),
-            Expanded(child: _RowsExample()),
-            // Spacer(),
-          ],
+          ),
+          child: Column(
+            children: [
+              Text('mainAxisAlignment'),
+              SegmentedButton(
+                showSelectedIcon: false,
+                selected: {1},
+                segments: const [
+                  ButtonSegment(value: 1, label: Text('start')),
+                  ButtonSegment(value: 2, label: Text('end')),
+                  ButtonSegment(value: 3, label: Text('center')),
+                  ButtonSegment(value: 4, label: Text('spaceBetween')),
+                  ButtonSegment(value: 5, label: Text('spaceAround')),
+                  ButtonSegment(value: 6, label: Text('spaceEvenly')),
+                ],
+              ),
+              SizedBox(height: 20),
+              Divider(height: 0),
+              Expanded(child: _ColumnsExample()),
+              Divider(height: 0),
+              Expanded(child: _RowsExample()),
+              // Spacer(),
+            ],
+          ),
         ),
       ),
     );
