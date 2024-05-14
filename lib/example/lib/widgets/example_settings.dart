@@ -88,11 +88,13 @@ class _SettingItem<T extends Enum> extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text('$T'),
-        const SizedBox(height: 5),
         Wrap(
           // alignment: WrapAlignment.center,
           children: [
+            Container(
+              margin: const EdgeInsets.only(right: 5),
+              child: Text('$T'),
+            ),
             ...values.map((value) {
               return ElevatedButton(
                 onPressed: onChanged != null ? () => onChanged?.call(value) : null,
