@@ -124,7 +124,5 @@ class _ElevatedRowDelegate extends _ElevatedFlexDelegate {
     }
   }
 
-  double get sumChildrenWidth {
-    return children.fold(0.0, (sum, child) => sum + child.size.width);
-  }
+
 }
