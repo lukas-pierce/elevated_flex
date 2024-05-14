@@ -157,25 +157,16 @@ class _ElevatedFlexDelegate extends BoxyDelegate {
         double freeSpaceHeight = constraints.maxHeight - sumChildrenHeight;
 
         return switch (effectiveMainAxisAlignment) {
-          MainAxisAlignment.start => () {
-              return (startY: 0.0, stepShift: 0.0);
-            }(),
+          MainAxisAlignment.start => (startY: 0, stepShift: 0),
 
           // readability
-          MainAxisAlignment.end => () {
-              return (
-                startY: freeSpaceHeight,
-                stepShift: 0.0,
-              );
-            }(),
+          MainAxisAlignment.end => (startY: freeSpaceHeight, stepShift: 0),
 
           // readability
-          MainAxisAlignment.center => () {
-              return (
-                startY: freeSpaceHeight / 2,
-                stepShift: 0.0,
-              );
-            }(),
+          MainAxisAlignment.center => (
+              startY: freeSpaceHeight / 2,
+              stepShift: 0,
+            ),
 
           // readability
           MainAxisAlignment.spaceBetween => () {
