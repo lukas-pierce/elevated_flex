@@ -33,7 +33,7 @@ class _ElevatedFlexDelegate extends BoxyDelegate {
 
   MainAxisAlignment get effectiveMainAxisAlignment {
     // reverse mainAxisAlignment for up vertical direction
-    if (direction == Axis.vertical && verticalDirection == VerticalDirection.up) {
+    if (isVertical && verticalDirection == VerticalDirection.up) {
       if (mainAxisAlignment == MainAxisAlignment.start) return MainAxisAlignment.end;
       if (mainAxisAlignment == MainAxisAlignment.end) return MainAxisAlignment.start;
     }
@@ -60,7 +60,7 @@ class _ElevatedFlexDelegate extends BoxyDelegate {
       final child = getChild(i);
       BoxConstraints childConstraints = constraints;
       if (effectiveCrossAxisAlignment == CrossAxisAlignment.stretch) {
-        if (direction == Axis.vertical) {
+        if (isVertical) {
           childConstraints = constraints.copyWith(minWidth: constraints.maxWidth);
         } else {
           childConstraints = constraints.copyWith(minHeight: constraints.maxHeight);
@@ -77,7 +77,7 @@ class _ElevatedFlexDelegate extends BoxyDelegate {
   }
 
   void calcWidth() {
-    if (direction == Axis.vertical) {
+    if (isVertical) {
       width = maxChildrenWidth;
     } else {
       width = (mainAxisSize == MainAxisSize.max) ? constraints.maxWidth : sumChildrenWidth;
@@ -85,7 +85,7 @@ class _ElevatedFlexDelegate extends BoxyDelegate {
   }
 
   void calcHeight() {
-    if (direction == Axis.vertical) {
+    if (isVertical) {
       height = (mainAxisSize == MainAxisSize.max) ? constraints.maxHeight : sumChildrenHeight;
     } else {
       height = maxChildrenHeight;
@@ -94,7 +94,7 @@ class _ElevatedFlexDelegate extends BoxyDelegate {
 
   /// positioning children with order according elevation
   void positionChildren() {
-    if (direction == Axis.vertical) {
+    if (isVertical) {
 
       // for column
       final startAndShift = calcStartYAndShift();
@@ -209,6 +209,8 @@ class _ElevatedFlexDelegate extends BoxyDelegate {
         };
     }
   }
+
+  bool get isVertical => direction == Axis.vertical;
 
   double get sumChildrenWidth => children.fold(0.0, (sum, child) => sum + child.size.width);
 
