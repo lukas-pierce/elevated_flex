@@ -57,7 +57,7 @@ class _ElevatedRowDelegate extends _ElevatedFlexDelegate {
         return (startX: 0, stepShift: 0);
 
       case MainAxisSize.max:
-        double freeSpaceHeight = constraints.maxHeight - sumChildrenHeight;
+        double freeSpaceHeight = constraints.maxWidth - sumChildrenWidth;
 
         return switch (effectiveMainAxisAlignment) {
           MainAxisAlignment.start => (startX: 0, stepShift: 0),
