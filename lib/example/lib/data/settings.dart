@@ -52,8 +52,6 @@ class _SettingsState extends State<Settings> {
   }
 
   void setMainAxisAlignment(MainAxisAlignment val) {
-    setState(() {
-      state = state.copyWith(mainAxisAlignment: val);
-    });
+    setState(() => state = state.copyWith(mainAxisAlignment: val));
   }
 }
