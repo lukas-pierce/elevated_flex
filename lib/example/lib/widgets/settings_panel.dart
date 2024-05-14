@@ -47,7 +47,7 @@ class SettingsPanel extends StatelessWidget {
                     _SettingItem<MainAxisSize>(
                       values: MainAxisSize.values,
                       selected: state.mainAxisSize,
-                      onChanged: (val) => context.read<FlexSettingsCubit>().mainAxisSize = val,
+                      onChanged: (val) => FlexSettings.of(context).setMainAxisSize(val),
                     ),
 
                     // mainAxisAlignment
@@ -64,7 +64,7 @@ class SettingsPanel extends StatelessWidget {
                       values: CrossAxisAlignment.values,
                       disabledValues: const [CrossAxisAlignment.baseline],
                       selected: state.crossAxisAlignment,
-                      onChanged: (val) => context.read<FlexSettingsCubit>().crossAxisAlignment = val,
+                      onChanged: (val) => FlexSettings.of(context).setCrossAxisAlignment(val),
                     ),
 
                     // verticalDirection
@@ -72,7 +72,7 @@ class SettingsPanel extends StatelessWidget {
                     _SettingItem<VerticalDirection>(
                       values: VerticalDirection.values,
                       selected: state.verticalDirection,
-                      onChanged: (val) => context.read<FlexSettingsCubit>().verticalDirection = val,
+                      onChanged: (val) => FlexSettings.of(context).setVerticalDirection(val),
                     ),
                   ],
                 );
