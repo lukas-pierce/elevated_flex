@@ -23,10 +23,10 @@ class ElevatedFlexExample extends StatelessWidget {
           ),
           child: Column(
             children: [
-              Text('mainAxisAlignment'),
+              const Text('mainAxisAlignment'),
               SegmentedButton(
                 showSelectedIcon: false,
-                selected: {1},
+                selected: const {1},
                 segments: const [
                   ButtonSegment(value: 1, label: Text('start')),
                   ButtonSegment(value: 2, label: Text('end')),
@@ -36,11 +36,11 @@ class ElevatedFlexExample extends StatelessWidget {
                   ButtonSegment(value: 6, label: Text('spaceEvenly')),
                 ],
               ),
-              SizedBox(height: 20),
-              Divider(height: 0),
-              Expanded(child: _ColumnsExample()),
-              Divider(height: 0),
-              Expanded(child: _RowsExample()),
+              const SizedBox(height: 20),
+              const Divider(height: 0),
+              const Expanded(child: _ColumnsExample()),
+              const Divider(height: 0),
+              const Expanded(child: _RowsExample()),
               // Spacer(),
             ],
           ),
