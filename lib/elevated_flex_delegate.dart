@@ -34,8 +34,12 @@ class _ElevatedFlexDelegate extends BoxyDelegate {
   MainAxisAlignment get effectiveMainAxisAlignment {
     // reverse mainAxisAlignment for up vertical direction
     if (isVertical && verticalDirection == VerticalDirection.up) {
-      if (mainAxisAlignment == MainAxisAlignment.start) return MainAxisAlignment.end;
-      if (mainAxisAlignment == MainAxisAlignment.end) return MainAxisAlignment.start;
+      if (mainAxisAlignment == MainAxisAlignment.start) {
+        return MainAxisAlignment.end;
+      }
+      if (mainAxisAlignment == MainAxisAlignment.end) {
+        return MainAxisAlignment.start;
+      }
     }
 
     return mainAxisAlignment;
@@ -44,8 +48,12 @@ class _ElevatedFlexDelegate extends BoxyDelegate {
   CrossAxisAlignment get effectiveCrossAxisAlignment {
     // reverse crossAxisAlignment for up vertical direction
     if (direction == Axis.horizontal && verticalDirection == VerticalDirection.up) {
-      if (crossAxisAlignment == CrossAxisAlignment.start) return CrossAxisAlignment.end;
-      if (crossAxisAlignment == CrossAxisAlignment.end) return CrossAxisAlignment.start;
+      if (crossAxisAlignment == CrossAxisAlignment.start) {
+        return CrossAxisAlignment.end;
+      }
+      if (crossAxisAlignment == CrossAxisAlignment.end) {
+        return CrossAxisAlignment.start;
+      }
     }
     return crossAxisAlignment;
   }
