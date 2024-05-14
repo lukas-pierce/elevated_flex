@@ -52,7 +52,8 @@ class ElevatedFlex extends StatelessWidget {
     }).toList();
 
     return CustomBoxy(
-      delegate: _ElevatedRowDelegate(
+      delegate: _ElevatedFlexDelegate(
+        direction: direction,
         mainAxisAlignment: mainAxisAlignment,
         mainAxisSize: mainAxisSize,
         crossAxisAlignment: crossAxisAlignment,
