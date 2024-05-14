@@ -1,4 +1,3 @@
-// import 'package:collection/collection.dart';
 part of 'elevated_flex.dart';
 
 /// Вижет который строит колонку
