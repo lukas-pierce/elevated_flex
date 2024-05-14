@@ -24,7 +24,7 @@ class ElevatedRow extends ElevatedFlex {
     super.crossAxisAlignment = CrossAxisAlignment.center,
     super.verticalDirection = VerticalDirection.down,
     super.children = const <Widget>[],
-  }): super(
-    direction: Axis.vertical,
+  }) : super(
+    direction: Axis.horizontal,
   );
 }
