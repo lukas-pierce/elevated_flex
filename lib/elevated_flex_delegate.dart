@@ -66,15 +66,18 @@ class _ElevatedFlexDelegate extends BoxyDelegate {
     // layout children with order according elevation
     for (int i = 0; i < childrenCount; i++) {
       final child = getChild(i);
-      BoxConstraints childConstraints = constraints;
+
+      // constrains for child
+      BoxConstraints cConstraints = constraints;
       if (effectiveCrossAxisAlignment == CrossAxisAlignment.stretch) {
         if (isVertical) {
-          childConstraints = constraints.copyWith(minWidth: constraints.maxWidth);
+          cConstraints = constraints.copyWith(minWidth: constraints.maxWidth);
         } else {
-          childConstraints = constraints.copyWith(minHeight: constraints.maxHeight);
+          cConstraints = constraints.copyWith(minHeight: constraints.maxHeight);
         }
       }
-      child.layout(childConstraints);
+
+      child.layout(cConstraints);
     }
 
     calcWidth();
