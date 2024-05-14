@@ -15,13 +15,9 @@ class ElevatedFlexExample extends StatelessWidget {
             padding: EdgeInsets.all(0),
             child: Column(
               children: [
-                Expanded(
-                  child: _ColumnsExample(),
-                ),
+                Expanded(child: _ColumnsExample()),
                 Divider(height: 0),
-                Expanded(
-                  child: _RowsExample(),
-                ),
+                Expanded(child: _RowsExample()),
               ],
             ),
           ),
