@@ -41,13 +41,14 @@ class _ColumnsExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start;
-    const MainAxisSize mainAxisSize = MainAxisSize.min;
-    const CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center;
-    const VerticalDirection verticalDirection = VerticalDirection.down;
-
     return BlocBuilder<FlexSettingsCubit, FlexSettingsState>(builder: (context, state) {
-      return const Row(
+
+      final mainAxisAlignment = state.mainAxisAlignment;
+      final mainAxisSize = state.mainAxisSize;
+      final crossAxisAlignment = state.crossAxisAlignment;
+      final verticalDirection = state.verticalDirection;
+
+      return Row(
         children: [
           Expanded(
             child: _ExampleContainer(
@@ -57,7 +58,7 @@ class _ColumnsExample extends StatelessWidget {
                 mainAxisSize: mainAxisSize,
                 crossAxisAlignment: crossAxisAlignment,
                 verticalDirection: verticalDirection,
-                children: [
+                children: const [
                   Elevated(child: Item1()),
                   ItemCenter(),
                   Elevated(child: Item2()),
