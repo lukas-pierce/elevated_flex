@@ -7,11 +7,17 @@ class InheritedSettings extends InheritedWidget {
     super.key,
     required this.state,
     required this.setMainAxisAlignment,
+    required this.setMainAxisSize,
+    required this.setCrossAxisAlignment,
+    required this.setVerticalDirection,
     required super.child,
   });
 
   final FlexSettingsState state;
   final void Function(MainAxisAlignment) setMainAxisAlignment;
+  final void Function(MainAxisSize) setMainAxisSize;
+  final void Function(CrossAxisAlignment) setCrossAxisAlignment;
+  final void Function(VerticalDirection) setVerticalDirection;
 
   static InheritedSettings? maybeOf(BuildContext context) {
     return context.dependOnInheritedWidgetOfExactType<InheritedSettings>();
