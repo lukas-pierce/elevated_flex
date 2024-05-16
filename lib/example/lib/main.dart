@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'elevated_flex_example.dart';
+import 'pages/row_and_col_behavior.dart';
 
 void main() {
   runApp(const ElevatedFlexExampleApp());
@@ -14,7 +14,7 @@ class ElevatedFlexExampleApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Elevated Flex Example',
-      home: ElevatedFlexExample(),
+      home: RowAndColBehaviorExample(),
     );
   }
 }
