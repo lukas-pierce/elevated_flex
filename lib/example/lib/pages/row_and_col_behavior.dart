@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:elevated_flex/elevated_flex.dart';
 
-import 'data/settings.dart';
-import 'widgets/settings_panel.dart';
-import 'widgets/example_items.dart';
+import '../flex_settings/flex_settings.dart';
+import '../widgets/example_items.dart';
 
-class ElevatedFlexExample extends StatelessWidget {
-  const ElevatedFlexExample({super.key});
+class RowAndColBehaviorExample extends StatelessWidget {
+  const RowAndColBehaviorExample({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +14,7 @@ class ElevatedFlexExample extends StatelessWidget {
         child: Builder(builder: (context) {
           return const Column(
             children: [
-              SettingsPanel(),
+              FlexSettingsPanel(),
               Expanded(
                 child: SafeArea(
                   top: false,
