@@ -5,9 +5,47 @@ class ElevatedColumnExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Elevated Column'),
+      ),
       body: Center(
-        child: Text('ElevatedColumnExample'),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Container(
+              width: 100,
+              height: 100,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border.all(color: Colors.grey),
+              ),
+              alignment: Alignment.center,
+              child: const Text('child'),
+            ),
+            Container(
+              width: 100,
+              height: 100,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border.all(color: Colors.grey),
+              ),
+              alignment: Alignment.center,
+              child: const Text('child'),
+            ),
+            Container(
+              width: 100,
+              height: 100,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border.all(color: Colors.grey),
+                boxShadow: const [BoxShadow(blurRadius: 10, spreadRadius: 3)],
+              ),
+              alignment: Alignment.center,
+              child: const Text('child'),
+            ),
+          ],
+        ),
       ),
     );
   }
