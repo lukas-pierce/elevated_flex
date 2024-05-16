@@ -4,8 +4,8 @@ import 'package:elevated_flex/elevated_flex.dart';
 import '../flex_settings/flex_settings.dart';
 import '../widgets/example_items.dart';
 
-class RowAndColBehaviorExample extends StatelessWidget {
-  const RowAndColBehaviorExample({super.key});
+class ColumnAndRowBehaviorExample extends StatelessWidget {
+  const ColumnAndRowBehaviorExample({super.key});
 
   @override
   Widget build(BuildContext context) {
