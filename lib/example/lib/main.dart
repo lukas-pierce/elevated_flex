@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'pages/row_and_col_behavior.dart';
+import 'pages/row_and_col_behavior_example.dart';
 
 void main() {
   runApp(const ElevatedFlexExampleApp());
