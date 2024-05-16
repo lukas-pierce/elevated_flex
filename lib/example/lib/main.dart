@@ -37,24 +37,27 @@ class ExamplesList extends StatelessWidget {
           ListTile(
             title: const Text('Elevated Column'),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (_) => const ElevatedColExample()),
-              );
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (_) => const ElevatedColumnExample(),
+              ));
             },
           ),
           const Divider(height: 1),
           ListTile(
             title: const Text('Elevated Row'),
             onTap: () {
-              //
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (_) => const ElevatedRowExample(),
+              ));
             },
           ),
           const Divider(height: 1),
           ListTile(
-            title: const Text('Column And Row Behavior'),
+            title: const Text('Column and Row Behavior'),
             onTap: () {
-              //
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (_) => const ColumnAndRowBehaviorExample(),
+              ));
             },
           ),
           const Divider(height: 1),
