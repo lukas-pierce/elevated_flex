@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:elevated_flex/elevated_flex.dart';
 
 class ElevatedColumnExample extends StatelessWidget {
   const ElevatedColumnExample({super.key});
@@ -10,11 +11,11 @@ class ElevatedColumnExample extends StatelessWidget {
         title: const Text('Elevated Column'),
       ),
       body: const Center(
-        child: Column(
+        child: ElevatedColumn(
           mainAxisSize: MainAxisSize.min,
           children: [
             SimpleChild(),
-            SimpleChild(shadow: true),
+            Elevated(child: SimpleChild(shadow: true)),
             SimpleChild(),
           ],
         ),
