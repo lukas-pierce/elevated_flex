@@ -11,10 +11,42 @@ class ElevatedFlexExampleApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Elevated Flex Example',
-      home: ColumnAndRowBehaviorExample(),
+      title: 'Elevated Flex Examples',
+      home: Scaffold(
+        // child: ColumnAndRowBehaviorExample()
+        appBar: AppBar(
+          title: const Text('Examples:'),
+          centerTitle: false,
+        ),
+        body: ListView(
+          children: [
+            const Divider(height: 1),
+            ListTile(
+              title: const Text('Elevated Column'),
+              onTap: () {
+                //
+              },
+            ),
+            const Divider(height: 1),
+            ListTile(
+              title: const Text('Elevated Row'),
+              onTap: () {
+                //
+              },
+            ),
+            const Divider(height: 1),
+            ListTile(
+              title: const Text('Column And Row Behavior'),
+              onTap: () {
+                //
+              },
+            ),
+            const Divider(height: 1),
+          ],
+        ),
+      ),
     );
   }
 }
