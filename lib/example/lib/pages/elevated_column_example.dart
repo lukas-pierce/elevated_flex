@@ -13,26 +13,7 @@ class ElevatedColumnExample extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Container(
-              width: 100,
-              height: 100,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border.all(color: Colors.grey),
-              ),
-              alignment: Alignment.center,
-              child: const Text('child'),
-            ),
-            Container(
-              width: 100,
-              height: 100,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border.all(color: Colors.grey),
-              ),
-              alignment: Alignment.center,
-              child: const Text('child'),
-            ),
+            const SimpleChild(),
             Container(
               width: 100,
               height: 100,
@@ -44,9 +25,28 @@ class ElevatedColumnExample extends StatelessWidget {
               alignment: Alignment.center,
               child: const Text('child'),
             ),
+            const SimpleChild(),
           ],
         ),
       ),
+    );
+  }
+}
+
+class SimpleChild extends StatelessWidget {
+  const SimpleChild({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 100,
+      height: 100,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        border: Border.all(color: Colors.grey),
+      ),
+      alignment: Alignment.center,
+      child: const Text('child'),
     );
   }
 }
