@@ -20,3 +20,6 @@ Add gif version of video example
 
 ## 0.0.6
 Update package description
+
+## 0.0.7
+Update gif
