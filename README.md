@@ -35,7 +35,6 @@ ElevatedRow(
 ```
 
 
-
 ## Flex params
 
 The `ElevatedColumn` and `ElevatedRow` widgets accept all the same parameters as their standard prototypes:
@@ -50,8 +49,7 @@ To test the behavior, I developed a special sandbox screen where you can compare
 
 example link
 
-video
-![Flex Params Sandbox](images/flex-params-sandbox.mp4)
+https://github.com/lukas-pierce/elevated_flex/assets/4938316/3b5b91f4-2f94-46a9-bda8-1afba238d8db
 
 
 ## TODO
