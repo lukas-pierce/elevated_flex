@@ -51,7 +51,10 @@ To test the behavior, I developed a special sandbox screen where you can compare
 
 ![Flex Params Sandbox](https://raw.githubusercontent.com/lukas-pierce/elevated_flex/main/images/flex-params-sandbox.gif)
 
-https://github.com/lukas-pierce/elevated_flex/assets/4938316/3b5b91f4-2f94-46a9-bda8-1afba238d8db
+<details>
+  <summary>Video version</summary>
+  https://github.com/lukas-pierce/elevated_flex/assets/4938316/3b5b91f4-2f94-46a9-bda8-1afba238d8db
+</details>
 
 
 ## TODO
