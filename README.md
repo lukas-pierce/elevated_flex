@@ -38,7 +38,7 @@ ElevatedRow(
 
 ## Flex params
 
-The `ElevatedColumn` and `ElevatedRow` widgets accept all the same parameters as their standard prototypes: mainAxisAlignment, mainAxisSize, crossAxisAlignment, verticalDirection. Therefore, you can safely use it for replacement where necessary.
+The `ElevatedColumn` and `ElevatedRow` widgets accept all the same parameters as their standard prototypes: `mainAxisAlignment`, `mainAxisSize`, `crossAxisAlignment`, `verticalDirection`. Therefore, you can safely use it for replacement where necessary.
 
 To test the behavior, I developed a special sandbox screen where you can compare the behavior of standard components and their Elevated analogues
 
