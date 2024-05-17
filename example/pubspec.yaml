@@ -25,4 +25,4 @@ flutter:
 
 dependency_overrides:
   elevated_flex:
-    path: ../../
+    path: ../
