@@ -13,3 +13,7 @@ Added docs and example
 ## 0.0.4
 
 Fix image url for pub.dev
+
+## 0.0.4
+
+Add gif version of video example
