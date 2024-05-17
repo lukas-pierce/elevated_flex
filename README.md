@@ -51,7 +51,7 @@ To test the behavior, I developed a special sandbox screen where you can compare
 example link
 
 video
-
+![Flex Params Sandbox](images/flex-params-sandbox.mp4)
 
 
 ## TODO
