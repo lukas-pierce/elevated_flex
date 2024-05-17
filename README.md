@@ -49,7 +49,7 @@ To test the behavior, I developed a special sandbox screen where you can compare
 
 [column_and_row_behavior_example.dart](https://github.com/lukas-pierce/elevated_flex/blob/main/example/lib/pages/column_and_row_behavior_example.dart)
 
-![Flex Params Sandbox](https://raw.githubusercontent.com/lukas-pierce/elevated_flex/main/images/flex-params-sandbox.gif)
+<img src="https://raw.githubusercontent.com/lukas-pierce/elevated_flex/main/images/flex-params-sandbox.gif" alt="Flex Params Sandbox" style="max-height:640px; min-height: 200px">
 
 <details>
   <summary>Video version</summary>
