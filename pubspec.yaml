@@ -1,6 +1,6 @@
 name: elevated_flex
-description: "Column and Row with z-index elevated children"
-version: 0.0.5
+description: "Build Column and Row with ability to elevate some children above the rest. This works like z-index in Web"
+version: 0.0.6
 homepage: https://github.com/lukas-pierce/elevated_flex
 
 environment:

@@ -17,3 +17,6 @@ Fix image url for pub.dev
 ## 0.0.5
 
 Add gif version of video example
+
+## 0.0.6
+Update package description
