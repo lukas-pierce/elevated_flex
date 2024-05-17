@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+export 'flex_settings_panel.dart';
+
 @immutable
 final class FlexSettingsState {
   final MainAxisAlignment mainAxisAlignment;

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../data/settings.dart';
+import 'flex_settings.dart';
 
-class SettingsPanel extends StatelessWidget {
-  const SettingsPanel({super.key});
+class FlexSettingsPanel extends StatelessWidget {
+  const FlexSettingsPanel({super.key});
 
   @override
   Widget build(BuildContext context) {
