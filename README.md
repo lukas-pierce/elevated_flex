@@ -2,7 +2,7 @@
 
 `elevated_flex` is flutter package that allows you to build columns and rows within which you can elevate some children above the rest. At the same time, without violating their order and content adaptability.
 
-![Elevated Flex](images/elevated_flex.png)
+![Elevated Flex](https://raw.githubusercontent.com/lukas-pierce/elevated_flex/main/images/elevated_flex.png)
 
 ## ElevatedColumn
 
