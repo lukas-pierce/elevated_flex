@@ -1,6 +1,6 @@
 name: elevated_flex
 description: "Column and Row with z-index elevated children"
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/lukas-pierce/elevated_flex
 
 environment:
