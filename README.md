@@ -1,6 +1,6 @@
 ## About
 
-elevated_flex is a package that allows you to build columns and rows within which you can elevate some children above the rest. At the same time, without violating their order and content adaptability.
+`elevated_flex` is a package that allows you to build columns and rows within which you can elevate some children above the rest. At the same time, without violating their order and content adaptability.
 
 ![Elevated Flex](images/elevated_flex.png)
 
