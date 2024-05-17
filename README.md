@@ -47,7 +47,7 @@ Therefore, you can safely use it for replacement where necessary.
 
 To test the behavior, I developed a special sandbox screen where you can compare the behavior of standard components and their Elevated analogues
 
-[lib/example/lib/pages/column_and_row_behavior_example.dart](https://github.com/lukas-pierce/elevated_flex/blob/main/lib/example/lib/pages/column_and_row_behavior_example.dart)
+[lib/example/lib/pages/column_and_row_behavior_example.dart](https://github.com/lukas-pierce/elevated_flex/blob/main/example/lib/pages/column_and_row_behavior_example.dart)
 
 https://github.com/lukas-pierce/elevated_flex/assets/4938316/3b5b91f4-2f94-46a9-bda8-1afba238d8db
 
