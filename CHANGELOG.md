@@ -9,3 +9,7 @@ Format code according Flutter standards
 ## 0.0.3
 
 Added docs and example
+
+## 0.0.4
+
+Fix image url for pub.dev
